@@ -18,8 +18,7 @@ Robotic JS is a progressive Node.js framework designed for building scalable and
 ## Login to GitHub:
 
     Open your web browser and go to GitHub.
-
-## Login to your GitHub account.
+    Login to your GitHub account.
 
 ## Create a New Repository:
 
