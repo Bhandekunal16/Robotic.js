@@ -13,7 +13,7 @@ Robotic JS is a progressive Node.js framework designed for building scalable and
 
 ## To add a new repository (repo) to GitHub, you can follow these steps:
 
-## Method 1: Creating a New Repository Through the GitHub Website
+## Creating a New Repository Through the GitHub Website
 
 ## Login to GitHub:
 
