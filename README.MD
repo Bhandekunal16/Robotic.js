@@ -37,7 +37,7 @@ Choose a license for your repository. If you're unsure, GitHub provides a "Choos
 
 Click the "Create repository" button.
 
-## Create a new repository
+## Add this thing in your terminal of your project directory.
 
     git remote add origin https://github.com/your-username/your-repo.git
     git branch -M main
