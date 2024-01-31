@@ -8,7 +8,6 @@ const app = express();
 app.use(bodyParser.json());
 const port = 3004;
 
-const color = new Color();
 const logger = new Logger();
 const node = new Node();
 
