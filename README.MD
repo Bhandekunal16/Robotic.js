@@ -40,9 +40,9 @@ Click the "Create repository" button.
 
 ## Create a new repository
 
-git remote add origin https://github.com/your-username/your-repo.git
-git branch -M main
-git push -u origin main
+    git remote add origin https://github.com/your-username/your-repo.git
+    git branch -M main
+    git push -u origin main
 
 ## Node Installation
 
