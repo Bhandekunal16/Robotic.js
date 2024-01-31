@@ -6,7 +6,7 @@ const Node = require("./module/index");
 
 const app = express();
 app.use(bodyParser.json());
-const port = 3000;
+const port = 3004;
 
 const color = new Color();
 const logger = new Logger();
