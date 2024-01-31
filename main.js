@@ -20,7 +20,7 @@ app.get("/", async (req, res) => {
 const routes = [Node, Color, Logger];
 let imports = routes.map((elements) => elements.name);
 
-app.listen(port, async () => {
+app.listen(port, () => {
   logger.log("***************");
   logger.new(imports);
   logger.log(`Node app is successfully created on http://localhost: ${port}.`);
