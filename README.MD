@@ -1,7 +1,5 @@
 # Robotec JS
 
-![Robotec JS Logo](https://example.com/robotec-logo.png)
-
 Robotec JS is a progressive Node.js framework designed for building scalable and efficient web applications. It leverages modern JavaScript features and follows best practices to make development enjoyable and productive.
 
 ## Features
