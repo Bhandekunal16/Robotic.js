@@ -3,10 +3,11 @@ const bodyParser = require("body-parser");
 const Color = require("./interface/color");
 const Logger = require("./interface/Logger");
 const Node = require("./module/index");
+require("dotenv").config();
 
 const app = express();
 app.use(bodyParser.json());
-const port = 3004;
+const port = process.env.LOCALHOST;
 
 const logger = new Logger();
 const node = new Node();
