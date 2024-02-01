@@ -17,7 +17,7 @@ class NestModule {
     export class ${name}Module {}
   `;
     const fileName = `${name + ".module.ts"}`;
-    const folderName = "../src";
+    const folderName = "../../src";
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
 

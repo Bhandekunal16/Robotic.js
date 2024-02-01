@@ -27,7 +27,7 @@ class TypeScript {
    */
   create(name) {
     const fileName = `${name}`;
-    const folderName = "../src";
+    const folderName = "../../src";
     const trimmed = name.split(".")[0];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);

@@ -1,6 +1,6 @@
 {
-  "name": "robotic",
-  "version": "1.0.0",
+  "name": "robotic.js",
+  "version": "1.0.1",
   "description": "nothing",
   "main": "main.js",
   "scripts": {
@@ -8,10 +8,17 @@
     "start": "nodemon main.js",
     "build": "nest build"
   },
-  "author": "",
+  "keywords": [
+    "framework"
+  ],
+  "author": "Kunal Bhande",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.1",
     "nodemon": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bhandekunal16/Robotic.js.git"
   }
 }
