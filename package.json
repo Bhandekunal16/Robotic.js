@@ -1,6 +1,6 @@
 {
   "name": "robotic.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "nothing",
   "main": "main.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "dotenv": "^16.4.1",
     "nodemon": "^3.0.3"
   },
-  "repository": {
+  "repository": {u
     "type": "git",
     "url": "https://github.com/Bhandekunal16/Robotic.js.git"
   }
