@@ -21,7 +21,7 @@ class NestRepository {
   
   `;
       const fileName = `${name + ".repository.ts"}`;
-      const folderName = "../../src";
+      const folderName = "../../../src";
       try {
         const folderPath = path.join(__dirname, `${folderName}/${name}`);
 

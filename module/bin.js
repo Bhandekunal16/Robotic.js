@@ -32,7 +32,7 @@ class Binary {
     /**
      * @type {string}
      */
-    const folderName = "../../src";
+    const folderName = "../../../src";
 
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);

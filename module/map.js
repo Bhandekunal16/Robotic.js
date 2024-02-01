@@ -30,7 +30,7 @@ class Map {
     class ${trimmed} {}
     module.exports = ${trimmed};
   `;
-    const folderName = "../../src";
+    const folderName = "../../../src";
 
     try {
       /**

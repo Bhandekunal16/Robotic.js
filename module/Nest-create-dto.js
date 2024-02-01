@@ -11,7 +11,7 @@ class NestDtoCreate {
     }
   `;
     const fileName = `create.${name}.dto.ts`;
-    const folderName = "../../src";
+    const folderName = "../../../src";
     try {
       const folderPath = path.join(
         __dirname,

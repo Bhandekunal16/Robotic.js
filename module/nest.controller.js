@@ -24,7 +24,7 @@ class NestController {
     
   `;
       const fileName = `${name + ".controller.ts"}`;
-      const folderName = "../../src";
+      const folderName = "../../../src";
 
       try {
         const folderPath = path.join(__dirname, `${folderName}/${name}`);
