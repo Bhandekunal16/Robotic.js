@@ -51,5 +51,5 @@ npm install
 
 npm start
 
-## found example in the this repositroy
+## found example in the this repository
     https://github.com/Bhandekunal16/Npm---packages.git
