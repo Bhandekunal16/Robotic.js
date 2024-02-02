@@ -63,7 +63,12 @@ class Logger {
    * @param {any} body
    * @function - create a default log message for error
    */
-  error(body) {
+  error(body, optionalContain) {
+    /**
+     * @type {string}
+     */
+
+    const optional = optionalContain == undefined ? "" : optionalContain;
     const string = `${color.red}  [NODE] : ERROR ${body}`;
     console.log(string);
   }
