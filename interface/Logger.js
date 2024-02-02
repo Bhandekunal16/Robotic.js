@@ -44,7 +44,16 @@ class Logger {
     console.log(string);
   }
 
+  /**
+   * @param {any} body
+   * @param {any} optionalContain
+   * @function - create a default log message for success
+   */
   warn(message, optionalContain) {
+    /**
+     * @type {string}
+     */
+
     const optional = optionalContain == undefined ? "" : optionalContain;
     const string = `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${optional}`;
     console.log(string);
@@ -57,6 +66,19 @@ class Logger {
   error(body) {
     const string = `${color.red}  [NODE] : ERROR ${body}`;
     console.log(string);
+  }
+
+  /**
+   * @param {*} services - need the array as input.
+   * @function - create a custom theme for the logger
+   */
+  array(services) {
+    services.forEach((service) => {
+      const string = `${color.green}${new Date().toLocaleDateString()} [NODE] ${
+        this.time
+      } ${color.yellow} [NODE] : ${color.green} ${service.toUpperCase()} `;
+      console.log(string);
+    });
   }
 }
 
