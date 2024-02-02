@@ -69,7 +69,7 @@ class Logger {
      */
 
     const optional = optionalContain == undefined ? "" : optionalContain;
-    const string = `${color.red}  [NODE] : ERROR ${body}`;
+    const string = `${color.red}  [NODE] : ERROR ${body} ${optional}`;
     console.log(string);
   }
 
