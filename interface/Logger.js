@@ -36,16 +36,16 @@ class Logger {
   }
 
   /**
-   * @param {any} body
+   * @param {any} message
    * @function - create a default log message for success
    */
-  log(body) {
-    const string = `${color.green}  [NODE] : ${color.white} ${body}`;
+  log(message) {
+    const string = `${color.green}  [NODE] : ${color.white} ${message}`;
     console.log(string);
   }
 
   /**
-   * @param {any} body
+   * @param {any} message
    * @param {any} optionalContain
    * @function - create a default log message for success
    */
@@ -60,28 +60,30 @@ class Logger {
   }
 
   /**
-   * @param {any} body
+   * @param {any} message
    * @function - create a default log message for error
    */
-  error(body, optionalContain) {
+  error(message, optionalContain) {
     /**
      * @type {string}
      */
 
     const optional = optionalContain == undefined ? "" : optionalContain;
-    const string = `${color.red}  [NODE] : ERROR ${body} ${optional}`;
+    const string = `${color.red}  [NODE] : ERROR ${message} ${optional}`;
     console.log(string);
   }
 
   /**
-   * @param {*} services - need the array as input.
+   * @param {*} array - need the array as input.
    * @function - create a custom theme for the logger
    */
-  array(services) {
-    services.forEach((service) => {
-      const string = `${color.green}${new Date().toLocaleDateString()} [NODE] ${
-        this.time
-      } ${color.yellow} [NODE] : ${color.green} ${service.toUpperCase()} `;
+  array(array) {
+    array.forEach((array) => {
+      const string = `${
+        color.green
+      }${new Date().toLocaleDateString()} [NODE] - ${this.time}-${
+        color.yellow
+      }${array.toUpperCase()} `;
       console.log(string);
     });
   }
