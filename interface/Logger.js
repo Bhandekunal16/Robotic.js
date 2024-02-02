@@ -44,12 +44,18 @@ class Logger {
     console.log(string);
   }
 
+  warn(message, optionalContain) {
+    const optional = optionalContain == undefined ? "" : optionalContain;
+    const string = `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${optional}`;
+    console.log(string);
+  }
+
   /**
    * @param {any} body
    * @function - create a default log message for error
    */
   error(body) {
-    const string = `${color.red} + [NODE] ${body}`;
+    const string = `${color.red}  [NODE] : ERROR ${body}`;
     console.log(string);
   }
 }
