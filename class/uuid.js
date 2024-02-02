@@ -48,7 +48,7 @@ class UUID {
       const uuid =
         this.randomAlphabet().toLocaleUpperCase() +
         this.randomAlphabet() +
-        Math.floor(Math.random() * 10);
+        Math.floor(Math.random() * 100);
       array += uuid;
     }
 
