@@ -11,10 +11,6 @@ Robotic JS is a progressive Node.js framework designed for building scalable and
 - **Async/Await Support:** Utilize modern asynchronous JavaScript features for clean and readable code.
 - **Database Integration:** Seamless integration with popular databases like MongoDB, MySQL, and PostgreSQL.
 
-## To add a new repository (repo) to GitHub, you can follow these steps:
-
-## Creating a New Repository Through the GitHub Website
-
 ## Login to GitHub:
 
     Open your web browser and go to GitHub.
