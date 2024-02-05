@@ -49,16 +49,8 @@ class DataGenerator {
    * @returns {string[]} generate array that contain dummy data.
    */
   create(length, type) {
-    /**
-     * @type {boolean}
-     */
     const checkLength = typeChecker.checkNumber(length);
-
-    /**
-     * @type {boolean}
-     */
     const checkType = typeChecker.checkString(type);
-
     const lengthValue = checkLength && checkType ? length : 0;
 
     try {
@@ -174,7 +166,6 @@ class DataGenerator {
    * @function - captcha generating operations
    * @return - eight digit random captcha code.*/
   captcha() {
-    /** @type {string}*/
     let element = "";
 
     for (let j = 1; j < 5; j++) {
