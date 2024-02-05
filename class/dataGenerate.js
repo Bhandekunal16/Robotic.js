@@ -116,20 +116,10 @@ class DataGenerator {
    */
   generateRandomName(length) {
     try {
-      /**
-       * @type {string[]}
-       */
       let array = [];
 
       for (let index = 0; index < length; index++) {
-        /**
-         * @type {string[]}
-         */
         let name = [];
-
-        /**
-         * @type {string}
-         */
         let element = "";
 
         for (let j = 1; j < 4; j++) {
@@ -159,20 +149,10 @@ class DataGenerator {
    */
   generateRandomEmail(length) {
     try {
-      /**
-       * @type {string[]}
-       */
       let array = [];
 
       for (let index = 0; index < length; index++) {
-        /**
-         * @type {string[]}
-         */
         let name = [];
-
-        /**
-         * @type {string}
-         */
         let element = "";
 
         for (let j = 1; j < 7; j++) {
