@@ -73,6 +73,26 @@ class UUID {
 
     return number;
   }
+
+  /**
+   * @function - give the vectorized uuid string.
+   * @returns -  returns vectorized uuid string
+   */
+  vectorized() {
+    /** @type {string}*/
+    let value = "";
+    for (let index = 0; index < 10; index++) {
+      const string = this.randomAlphabet();
+      value += string;
+    }
+
+    /** @type {Buffer}*/
+    const buffer = Buffer.from(value, "utf-8");
+
+    /** @type {string}*/
+    const hexadecimalString = buffer.toString("hex");
+    return hexadecimalString;
+  }
 }
 
 module.exports = UUID;
