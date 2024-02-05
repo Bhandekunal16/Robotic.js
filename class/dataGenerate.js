@@ -51,8 +51,8 @@ class DataGenerator {
   }
   /**
    * @function - generate various type of data like name || mobile number || email
-   * @param {string} length - how many data you want to generate.
-   * @param {number} type - name || mobileNo || email.
+   * @param {number} length - how many data you want to generate.
+   * @param {string} type - name || mobileNo || email.
    * @returns {string[]} generate array that contain dummy data.
    */
   create(length, type) {
