@@ -11,41 +11,12 @@ Robotic JS is a progressive Node.js framework designed for building scalable and
 - **Async/Await Support:** Utilize modern asynchronous JavaScript features for clean and readable code.
 - **Database Integration:** Seamless integration with popular databases like MongoDB, MySQL, and PostgreSQL.
 
-## Login to GitHub:
+## How to use
 
-    Open your web browser and go to GitHub.
-    Login to your GitHub account.
-
-## Create a New Repository:
-
-    Click on the "+" icon in the top right corner of the GitHub page.
-    Select "New repository" from the dropdown menu.
-
-## Fill in Repository Details:
-
-    Enter a name for your repository in the "Repository name" field.
-    Optionally, provide a description for your repository.
-    Choose between public and private visibility (public repositories are visible to everyone, while private repositories are only visible to you and collaborators).
-
-Choose a license for your repository. If you're unsure, GitHub provides a "Choose a license" link that helps you select an appropriate license.
-
-## Create Repository:
-
-Click the "Create repository" button.
-
-## Add this thing in your terminal of your project directory.
-
-    git remote add origin https://github.com/your-username/your-repo.git
-    git branch -M main
-    git push -u origin main
-
-## Node Installation
-
-npm install
-
-## Running the app
-
-npm start
-
-## found example in the this repository
-    https://github.com/Bhandekunal16/Npm---packages.git
+    1. Install NodeJS (https://nodejs.org/) if you haven't already
+    2. in node.js or any javascript file like
+        const Logger = require("./interface/Logger");
+        let logger = new Logger();
+    3. in nest.js or any typescript file like
+        const Logger = require("./interface/Logger") as any;
+        let logger = new Logger();
