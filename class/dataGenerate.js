@@ -9,6 +9,46 @@ const typeChecker = new TypeChecker();
  * class that contain methods that generate random data
  */
 class DataGenerator {
+  constructor() {
+    /**
+     * @private
+     * @type {array<string>}
+     */
+    this.consonants = [
+      "b",
+      "c",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
+    /**
+     * @private
+     * @type {array<string>}
+     */
+    this.ovals = ["a", "e", "i", "o", "u"];
+
+    /**
+     * @private
+     * @type {array<string>}
+     */
+    this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
+  }
   /**
    * @function - generate various type of data like name || mobile number || email
    * @param {string} length - how many data you want to generate.
@@ -89,38 +129,6 @@ class DataGenerator {
         /**
          * @type {string[]}
          */
-        const consonants = [
-          "b",
-          "c",
-          "d",
-          "f",
-          "g",
-          "h",
-          "j",
-          "k",
-          "l",
-          "m",
-          "n",
-          "p",
-          "q",
-          "r",
-          "s",
-          "t",
-          "v",
-          "w",
-          "x",
-          "y",
-          "z",
-        ];
-
-        /**
-         * @type {string[]}
-         */
-        const ovals = ["a", "e", "i", "o", "u"];
-
-        /**
-         * @type {string[]}
-         */
         let name = [];
 
         /**
@@ -130,8 +138,8 @@ class DataGenerator {
 
         for (let j = 1; j < 4; j++) {
           element +=
-            consonants[Math.floor(Math.random() * 20)] +
-            ovals[Math.floor(Math.random() * 5)];
+            this.consonants[Math.floor(Math.random() * 20)] +
+            this.ovals[Math.floor(Math.random() * 5)];
         }
 
         name.push(element);
@@ -164,43 +172,6 @@ class DataGenerator {
         /**
          * @type {string[]}
          */
-        const consonants = [
-          "b",
-          "c",
-          "d",
-          "f",
-          "g",
-          "h",
-          "j",
-          "k",
-          "l",
-          "m",
-          "n",
-          "p",
-          "q",
-          "r",
-          "s",
-          "t",
-          "v",
-          "w",
-          "x",
-          "y",
-          "z",
-        ];
-
-        /**
-         * @type {string[]}
-         */
-        const emails = [
-          "@gmail.com",
-          "@yahoo.com",
-          "@hotmail.com",
-          "@example.com",
-        ];
-
-        /**
-         * @type {string[]}
-         */
         let name = [];
 
         /**
@@ -209,10 +180,10 @@ class DataGenerator {
         let element = "";
 
         for (let j = 1; j < 7; j++) {
-          element += consonants[Math.floor(Math.random() * 20)];
+          element += this.consonants[Math.floor(Math.random() * 20)];
         }
 
-        name.push(element + emails[Math.floor(Math.random() * 4)]);
+        name.push(element + this.emails[Math.floor(Math.random() * 4)]);
         array.push(...name);
       }
       return array.length > 0
@@ -224,6 +195,22 @@ class DataGenerator {
     } catch (error) {
       return error;
     }
+  }
+
+  /**
+   * @function - captcha generating operations
+   * @return - eight digit random captcha code.*/
+  captcha() {
+    /** @type {string}*/
+    let element = "";
+
+    for (let j = 1; j < 5; j++) {
+      element +=
+        this.consonants[Math.floor(Math.random() * 10)].toLocaleUpperCase() +
+        this.ovals[Math.floor(Math.random() * 5)];
+    }
+
+    return element;
   }
 }
 
