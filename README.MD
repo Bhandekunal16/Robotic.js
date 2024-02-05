@@ -17,18 +17,15 @@ Robotic JS is a progressive Node.js framework designed for building scalable and
     2. in node.js or any javascript file like
         const Logger = require("./interface/Logger");
         let logger = new Logger();
+
+        function main() {
+            logger.log('hello')
+        }
+
     3. in nest.js or any typescript file like
         const Logger = require("./interface/Logger") as any;
         let logger = new Logger();
 
-## How to Use
-
-1. Install Node.js
-   If you haven't already, install Node.js from https://nodejs.org/.
-
-2. In a Node.js or JavaScript file
-   const Logger = require("./interface/Logger");
-   const logger = new Logger();
-3. In a Nest.js or TypeScript file
-   import Logger from "./interface/Logger";
-   const logger = new Logger();
+        main() {
+            logger.log('hello')
+        }
