@@ -13,19 +13,8 @@ class Map {
    * @returns {string|undefined} The name of the created file's or undefined if there's an error.
    */
   create(name) {
-    /**
-     * @type {string}
-     */
     const trimmed = name.split(".")[0];
-
-    /**
-     * @type {string}
-     */
     const fileName = `${trimmed}.js`;
-
-    /**
-     * @type {string}
-     */
     const fileContent = `
     class ${trimmed} {}
     module.exports = ${trimmed};
@@ -33,14 +22,7 @@ class Map {
     const folderName = "../../../src";
 
     try {
-      /**
-       * @type {string}
-       */
       const folderPath = path.join(__dirname, `${folderName}`);
-
-      /**
-       * @type {string}
-       */
       const filePath = path.join(folderPath, fileName);
 
       !fs.existsSync(folderPath)

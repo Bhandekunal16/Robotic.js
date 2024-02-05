@@ -7,31 +7,16 @@ const logger = new Logger();
  * Class representing binary file operations.
  */
 class Binary {
-  /**
-   * @type {string}
-   */
   fileContent = "1000001";
 
   /**
-   * Creates a binary file with the specified name.
    * @function create a dummy bin file.
    * @param {string} name - The name of the file.
    * @returns {string|undefined} The name of the created file or undefined if there's an error.
    */
   create(name) {
-    /**
-     * @type {string}
-     */
     const fileName = `${name}`;
-
-    /**
-     * @type {string}
-     */
     const trimmed = name.split(".")[0];
-
-    /**
-     * @type {string}
-     */
     const folderName = "../../../src";
 
     try {

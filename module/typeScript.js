@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing Java file operations.
  */
 class TypeScript {
-  /**
-   * @type {string}
-   */
   fileContent = `
   const main = () => {
     try{

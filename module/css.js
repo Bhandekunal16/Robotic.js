@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing CSS file operations.
  */
 class Css {
-  /**
-   * @type {string}
-   */
   fileContent = `/* CSS file layout */
 
   /* Reset some default styles to ensure consistency */

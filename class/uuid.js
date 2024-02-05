@@ -5,7 +5,6 @@ class UUID {
    * @returns - returns a random alphabetic character from 'a'-'z'.
    */
   randomAlphabet() {
-    /** @type {Array<string>}*/
     const consonants = [
       "b",
       "c",
@@ -29,8 +28,6 @@ class UUID {
       "y",
       "z",
     ];
-
-    /** @type {number}*/
     const randomIndex = Math.floor(Math.random() * consonants.length);
 
     return consonants[randomIndex];
@@ -40,11 +37,9 @@ class UUID {
    * @function- generate alphanumeric UUID operation
    * @returns - alphanumeric UUID string*/
   alphanumeric() {
-    /** @type {string}*/
     let array = "";
 
     for (let index = 0; index < 4; index++) {
-      /** @type {string}*/
       const uuid =
         this.randomAlphabet().toLocaleUpperCase() +
         this.randomAlphabet() +
@@ -60,12 +55,10 @@ class UUID {
    * @function - numeric uuid generation operations
    * @returns - numeric uuid*/
   numeric(length) {
-    /** @type {string}*/
     let number = "";
     let arrayLength = length == undefined ? 10 : length;
 
     for (let index = 0; index < arrayLength; index++) {
-      /** @type {number}*/
       const element = Math.floor(Math.random() * 10);
 
       number += element;
@@ -79,17 +72,12 @@ class UUID {
    * @returns -  returns vectorized uuid string
    */
   vectorized() {
-    /** @type {string}*/
     let value = "";
     for (let index = 0; index < 10; index++) {
       const string = this.randomAlphabet();
       value += string;
     }
-
-    /** @type {Buffer}*/
     const buffer = Buffer.from(value, "utf-8");
-
-    /** @type {string}*/
     const hexadecimalString = buffer.toString("hex");
     return hexadecimalString;
   }

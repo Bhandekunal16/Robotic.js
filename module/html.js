@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing HTML file operations.
  */
 class HTML {
-  /**
-   * @type {string}
-   */
   fileContent = `<!DOCTYPE html>
   <html lang="en">
   
@@ -69,7 +66,6 @@ class HTML {
 `;
 
   /**
-   * Creates an HTML file with the specified name.
    * @function create a dummy html file.
    * @param {string} name - The name of the file.
    * @returns {string|undefined} The name of the created file or undefined if there's an error.

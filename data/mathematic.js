@@ -9,7 +9,7 @@ class mathematic {
    * @param {number || symbol} value - equations like  1 * 1 + 2
    * @function - solve any numeric equation.
    * @returns {number} answer of the equation.
-   * */
+   */
   algebra(value) {
     try {
       return eval(value);
@@ -46,13 +46,8 @@ class mathematic {
    * @returns - return power number || { error , status}.
    * */
   power(value1, value2) {
-    /**  @type {boolean}*/
     const number = type.checkNumber(value1);
-
-    /**  @type {boolean}*/
     const number2 = type.checkNumber(value2);
-
-    /**  @type {Array<number>}*/
     let array = [value1, value2];
 
     return number && number2
@@ -72,7 +67,6 @@ class mathematic {
    * @function - square root finding operation.
    * @returns - square root || { error , status}.*/
   squareRoot(value) {
-    /**  @type {boolean}*/
     const number = type.checkNumber(value);
 
     return number

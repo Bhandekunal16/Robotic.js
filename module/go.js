@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing Go file operations.
  */
 class Go {
-  /**
-   * @type {string}
-   */
   fileContent = `package main
 
   import "fmt"

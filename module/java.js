@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing Java file operations.
  */
 class Java {
-  /**
-   * @type {string}
-   */
   fileContent = `public class MyClass {
 
     // Function definition

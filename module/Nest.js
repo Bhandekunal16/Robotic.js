@@ -19,32 +19,14 @@ class Nest {
    * @returns {string|undefined} The name of the created file's or undefined if there's an error.
    */
   async create(name) {
-    /**
-     * @type {string}
-     */
     const value = name.split(".")[0];
-
-    /**
-     * @type {string}
-     */
-    const value2 = name.split(".")[0];
-
-    /**
-     * @type {string}
-     */
-    const value3 = name.split(".")[0];
-
-    /**
-     * @type {string}
-     */
-    const value4 = name.split(".")[0];
 
     Promise.all[
       (controller.create(value),
-      service.create(value2),
-      repository.create(value3),
-      Module.create(value4),
-      create.create(value4))
+      service.create(value),
+      repository.create(value),
+      Module.create(value),
+      create.create(value))
     ];
   }
 
@@ -53,9 +35,6 @@ class Nest {
    * @returns {Array|undefined} Array of the service Name's imported in module.
    */
   out() {
-    /**
-     * @type {Array}
-     */
     const route = [
       NestController,
       NestService,
@@ -63,10 +42,6 @@ class Nest {
       NestDtoCreate,
       NestModule,
     ];
-
-    /**
-     * @type {Array}
-     */
     const imports = route.map((elements) => elements.name);
 
     return imports;

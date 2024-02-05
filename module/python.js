@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing python file operations.
  */
 class Python {
-  /**
-   * @type {string}
-   */
   fileContent = `def function_name(parameter1, parameter2):
   # Function body
   # Perform operations using parameters

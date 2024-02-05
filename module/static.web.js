@@ -16,19 +16,8 @@ class Web {
    * @returns {string|undefined} The name of the created file's or undefined if there's an error.
    */
   create(name) {
-    /**
-     * @type {string}
-     */
     const value1 = name.split(".")[0] + ".js";
-
-    /**
-     * @type {string}
-     */
     const value2 = name.split(".")[0] + ".css";
-
-    /**
-     * @type {string}
-     */
     const value3 = name.split(".")[0] + ".html";
 
     html.create(value3);
@@ -41,14 +30,7 @@ class Web {
    * @returns {Array|undefined} Array of class name's.
    */
   out() {
-    /**
-     * @type {Array}
-     */
     const array = [HTML, Css, JavaScript];
-
-    /**
-     * @type {Array}
-     */
     const out = array.map((elements) => elements.name);
 
     return out;

@@ -1,14 +1,6 @@
 const Timestamp = require("./time");
 const Color = require("./color");
-
-/**
- * @type {Timestamp}
- */
 const time = new Timestamp();
-
-/**
- * @type {Timestamp}
- */
 const color = new Color();
 
 /**
@@ -16,9 +8,6 @@ const color = new Color();
  */
 class Logger {
   constructor() {
-    /**
-     * @private
-     */
     this.time = time.main();
   }
 
@@ -50,10 +39,6 @@ class Logger {
    * @function - create a default log message for success
    */
   warn(message, optionalContain) {
-    /**
-     * @type {string}
-     */
-
     const optional = optionalContain == undefined ? "" : optionalContain;
     const string = `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${optional}`;
     console.log(string);
@@ -64,10 +49,6 @@ class Logger {
    * @function - create a default log message for error
    */
   error(message, optionalContain) {
-    /**
-     * @type {string}
-     */
-
     const optional = optionalContain == undefined ? "" : optionalContain;
     const string = `${color.red}  [NODE] : ERROR ${message} ${optional}`;
     console.log(string);

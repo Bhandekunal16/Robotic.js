@@ -7,9 +7,6 @@ const logger = new Logger();
  * Class representing json file operations.
  */
 class JSON {
-  /**
-   * @type {string}
-   */
   fileContent = `{
     "name": "",
     "version": "1.0.0",
