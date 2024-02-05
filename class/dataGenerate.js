@@ -6,9 +6,6 @@ const typeChecker = new TypeChecker();
  */
 class DataGenerator {
   constructor() {
-    /**
-     * @private
-     */
     this.consonants = [
       "b",
       "c",
@@ -32,14 +29,8 @@ class DataGenerator {
       "y",
       "z",
     ];
-    /**
-     * @private
-     */
     this.ovals = ["a", "e", "i", "o", "u"];
 
-    /**
-     * @private
-     */
     this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
   }
   /**
