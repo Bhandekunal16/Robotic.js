@@ -1,5 +1,5 @@
-const HexColorGenerator = require("./class/random-hexColor-generator");
+const DataGenerator = require('./class/dataGenerate')
 
-const hex = new HexColorGenerator();
+const data = new DataGenerator()
 
-console.log(hex.getRandomColor())
+console.log(data.generateMobileNumber(10))

@@ -30,7 +30,6 @@ class DataGenerator {
       "z",
     ];
     this.ovals = ["a", "e", "i", "o", "u"];
-
     this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
   }
   /**
@@ -134,11 +133,9 @@ class DataGenerator {
       for (let index = 0; index < length; index++) {
         let name = [];
         let element = "";
-
         for (let j = 1; j < 7; j++) {
           element += this.consonants[Math.floor(Math.random() * 20)];
         }
-
         name.push(element + this.emails[Math.floor(Math.random() * 4)]);
         array.push(...name);
       }
