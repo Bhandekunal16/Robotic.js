@@ -1,5 +1,4 @@
-const DataGenerator = require('./class/dataGenerate')
+const Logger = require("./interface/Logger");
+const logger = new Logger();
 
-const data = new DataGenerator()
-
-console.log(data.generateMobileNumber(10))
+logger.warn("this is error");

@@ -17,10 +17,11 @@ class Logger {
    */
   new(services) {
     services.forEach((service) => {
-      const string = `${color.green}${new Date().toLocaleDateString()} [NODE] ${
-        this.time
-      } ${color.yellow} [SERVICE] ${color.green} ${service.toUpperCase()} `;
-      console.log(string);
+      console.log(
+        `${color.green}${new Date().toLocaleDateString()} [NODE] ${this.time} ${
+          color.yellow
+        } [SERVICE] ${color.green} ${service.toUpperCase()} `
+      );
     });
   }
 
@@ -29,8 +30,7 @@ class Logger {
    * @function - create a default log message for success
    */
   log(message) {
-    const string = `${color.green}  [NODE] : ${color.white} ${message}`;
-    console.log(string);
+    console.log(`${color.green}  [NODE] : ${color.white} ${message}`);
   }
 
   /**
@@ -39,9 +39,11 @@ class Logger {
    * @function - create a default log message for success
    */
   warn(message, optionalContain) {
-    const optional = optionalContain == undefined ? "" : optionalContain;
-    const string = `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${optional}`;
-    console.log(string);
+    console.log(
+      `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${
+        optionalContain ?? ""
+      }`
+    );
   }
 
   /**
@@ -49,9 +51,9 @@ class Logger {
    * @function - create a default log message for error
    */
   error(message, optionalContain) {
-    const optional = optionalContain == undefined ? "" : optionalContain;
-    const string = `${color.red}  [NODE] : ERROR ${message} ${optional}`;
-    console.log(string);
+    console.log(
+      `${color.red}  [NODE] : ERROR ${message} ${optionalContain ?? ""}`
+    );
   }
 
   /**
@@ -60,12 +62,11 @@ class Logger {
    */
   array(array) {
     array.forEach((array) => {
-      const string = `${
-        color.green
-      }${new Date().toLocaleDateString()} [NODE] - ${this.time}-${
-        color.yellow
-      }${array.toUpperCase()} `;
-      console.log(string);
+      console.log(
+        `${color.green}${new Date().toLocaleDateString()} [NODE] - ${
+          this.time
+        }-${color.yellow}${array.toUpperCase()} `
+      );
     });
   }
 }
