@@ -1,5 +1,4 @@
-/**
- * class contains the otp generating methods.*/
+/**class contains the otp generating methods.*/
 class OtpGenerator {
   /**
    * @function -generate a four digit otp

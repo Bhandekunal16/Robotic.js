@@ -1,6 +1,4 @@
-/**
- * class represent the type checking operation
- */
+/** class represent the type checking operation */
 class TypeChecker {
   /**
    * @function - check value typing is correct or not.

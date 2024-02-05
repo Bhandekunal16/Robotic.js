@@ -1,9 +1,7 @@
 const TypeChecker = require("./TypeChecker");
 const typeChecker = new TypeChecker();
 
-/**
- * class that contain methods that generate random data
- */
+/**class that contain methods that generate random data*/
 class DataGenerator {
   constructor() {
     this.consonants = [
@@ -63,8 +61,7 @@ class DataGenerator {
   /**
    * @function - generate various random mobile Number
    * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.
-   */
+   * @returns {string[]} generate array that contain dummy data.*/
   generateMobileNumber(length) {
     try {
       let array = [];
@@ -91,8 +88,7 @@ class DataGenerator {
   /**
    * @function - generate various random name
    * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.
-   */
+   * @returns {string[]} generate array that contain dummy data.*/
   generateRandomName(length) {
     try {
       let array = [];
@@ -121,11 +117,10 @@ class DataGenerator {
     }
   }
 
-  /**
+  /** 
    * @function - generate various random email
    * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.
-   */
+   * @returns {string[]} generate array that contain dummy data.*/
   generateRandomEmail(length) {
     try {
       let array = [];
