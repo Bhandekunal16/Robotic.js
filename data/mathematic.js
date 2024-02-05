@@ -1,15 +1,12 @@
 const TypeChecker = require("../class/TypeChecker");
 const type = new TypeChecker();
 
-/**
- *class that represents the mathematical operations.
- */
+/**class that represents the mathematical operations.*/
 class mathematic {
   /**
    * @param {number || symbol} value - equations like  1 * 1 + 2
    * @function - solve any numeric equation.
-   * @returns {number} answer of the equation.
-   */
+   * @returns {number} answer of the equation.*/
   algebra(value) {
     return eval(value);
   }
@@ -17,8 +14,7 @@ class mathematic {
   /**
    * @param {Array} array - Array like  [1, 2, 3000 ....]
    * @function - Add all element addition of array operation..
-   * @returns {number} returns addition of all array.
-   * */
+   * @returns {number} returns addition of all array.*/
   arrayAddition(array) {
     const value = array.reduce((accumulator, currentValue) => {
       return accumulator + currentValue * 1;
@@ -29,8 +25,7 @@ class mathematic {
   /**
    * @param {any} value - any number.
    * @function -  absolute number operation.
-   * @returns - return absolute number.
-   * */
+   * @returns - return absolute number.*/
   absolute(value) {
     return Math.abs(value);
   }
@@ -39,8 +34,7 @@ class mathematic {
    * @param {number} value1 - any number.
    * @param {number} value2 - any number.
    * @function -  find power operation.
-   * @returns - return power number || { error , status}.
-   * */
+   * @returns - return power number || { error , status}.*/
   power(value1, value2) {
     const number = type.checkNumber(value1);
     const number2 = type.checkNumber(value2);
@@ -61,7 +55,6 @@ class mathematic {
    * @returns - square root || { error , status}.*/
   squareRoot(value) {
     const number = type.checkNumber(value);
-
     return number
       ? Math.sqrt(value)
       : `type error : only type number accepted.`;
