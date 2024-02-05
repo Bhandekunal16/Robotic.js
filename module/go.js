@@ -5,27 +5,10 @@ const logger = new Logger();
 
 /** Class representing Go file operations.*/
 class Go {
-  fileContent = `package main
-
-  import "fmt"
-  
-  // Function definition
-  func functionName(parameter1 type1, parameter2 type2) returnType {
-      // Function body
-      // Perform operations using parameters
-      // ...
-  
-      // Return a value of returnType
-      return returnValue
-  }
-  
-  func main() {
-      // Example usage of the function
-      result := functionName(value1, value2)
-      // Perform actions with the result if needed
-      // ...
-  }
-`;
+  fileContent = ` package main
+                  import "fmt"
+      func functionName(parameter1 type1, parameter2 type2) returnType { return returnValue }
+      func main() { result := functionName(value1, value2)}`;
 
   /**Creates a Go file with the specified name.
    * @function create a dummy go file

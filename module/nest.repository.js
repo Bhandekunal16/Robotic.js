@@ -6,20 +6,11 @@ const logger = new Logger();
 class NestRepository {
   create(name) {
     try {
-      const fileContent = `
-    import { Injectable } from '@nestjs/common';
-  import { create${name}Dto } from './dto/create.${name}.dto';
-  
-  @Injectable()
-  export class ${name}Repository {
-    private readonly data: string[] = [];
-  
-    findAll(): string[] {
-      return this.data;
-    }
-  }
-  
-  `;
+      const fileContent = ` import { Injectable } from '@nestjs/common';
+                            import { create${name}Dto } from './dto/create.${name}.dto';
+                            @Injectable()
+                            export class ${name}Repository { private readonly data: string[] = [];
+                            findAll(): string[] { return this.data; } }`;
       const fileName = `${name + ".repository.ts"}`;
       const folderName = "../../../src";
       try {

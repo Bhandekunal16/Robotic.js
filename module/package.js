@@ -5,26 +5,11 @@ const logger = new Logger();
 
 /**Class representing json file operations.*/
 class JSON {
-  fileContent = `{
-    "name": "",
-    "version": "1.0.0",
-    "description": "",
-    "main": "main.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "",
-      "build": ""
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-     
-    }
-  }
-  
-`;
+  fileContent = `{ "name": "", "version": "1.0.0", "description": "", "main": "main.js",
+                    "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "", "build": "" },
+                    "author": "", "license": "ISC","dependencies": { } }`;
 
-  /** 
+  /**
    * @function : create a dummy json file.
    * @param {string} name - The name of the file.
    * @returns {string|undefined} The name of the created file or undefined if there's an error.*/

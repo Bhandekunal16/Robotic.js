@@ -5,17 +5,11 @@ const logger = new Logger();
 
 class NestModule {
   create(name) {
-    const fileContent = `
-    import { Module } from '@nestjs/common';
-    import { ${name}Controller } from './${name}.controller';
-    import { ${name}Service } from './${name}.service';
-    
-    @Module({
-      controllers: [${name}Controller],
-      providers: [${name}Service],
-    })
-    export class ${name}Module {}
-  `;
+    const fileContent = ` import { Module } from '@nestjs/common';
+                          import { ${name}Controller } from './${name}.controller';
+                          import { ${name}Service } from './${name}.service';
+                          @Module({ controllers: [${name}Controller], providers: [${name}Service], }) 
+                          export class ${name}Module {}`;
     const fileName = `${name + ".module.ts"}`;
     const folderName = "../../../src";
     try {

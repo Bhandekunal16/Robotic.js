@@ -5,14 +5,8 @@ const logger = new Logger();
 
 /**Class representing Java file operations.*/
 class JavaScript {
-  fileContent = `function main(){
-    try{
-
-    }catch(error){
-      return {res: error , status: false, msg: 'error'}
-    }
-  }`;
-
+  fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
+  
   /**Creates a javascript file with the specified name.
    * @function  create a dummy javascript file.
    * @param {string} name - The name of the file.

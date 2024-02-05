@@ -5,11 +5,7 @@ const logger = new Logger();
 
 class NestDtoCreate {
   create(name) {
-    const fileContent = `
-    export class create${name}Dto {
-
-    }
-  `;
+    const fileContent = `export class create${name}Dto { }`;
     const fileName = `create.${name}.dto.ts`;
     const folderName = "../../../src";
     try {

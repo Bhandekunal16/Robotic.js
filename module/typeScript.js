@@ -6,14 +6,7 @@ const logger = new Logger();
 /** Class representing Java file operations.*/
 class TypeScript {
   fileContent = `
-  const main = () => {
-    try{
-
-    }
-    catch(error){
-      return {res: error, status: false, msg: 'error'}
-    }
-  }`;
+  const main = () => {try{ } catch(error){ return {res: error, status: false, msg: 'error'} }}`;
 
   /**
    * @function - create a dummy typescript file.

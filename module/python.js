@@ -6,19 +6,8 @@ const logger = new Logger();
 /** Class representing python file operations.*/
 class Python {
   fileContent = `def function_name(parameter1, parameter2):
-  # Function body
-  # Perform operations using parameters
-  # ...
-
-  # Return a value (optional)
-  return return_value
-
-# Example usage of the function
-result = function_name(value1, value2)
-# Perform actions with the result if needed
-# ...
-
-`;
+                      return return_value
+                      result = function_name(value1, value2)`;
 
   /**
    * @function create dummy python file.
