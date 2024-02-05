@@ -8,7 +8,6 @@ class DataGenerator {
   constructor() {
     /**
      * @private
-     * @type {array<string>}
      */
     this.consonants = [
       "b",
@@ -35,13 +34,11 @@ class DataGenerator {
     ];
     /**
      * @private
-     * @type {array<string>}
      */
     this.ovals = ["a", "e", "i", "o", "u"];
 
     /**
      * @private
-     * @type {array<string>}
      */
     this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
   }
