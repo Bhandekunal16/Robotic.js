@@ -11,11 +11,7 @@ class mathematic {
    * @returns {number} answer of the equation.
    */
   algebra(value) {
-    try {
-      return eval(value);
-    } catch (error) {
-      return error;
-    }
+    return eval(value);
   }
 
   /**
@@ -52,14 +48,11 @@ class mathematic {
 
     return number && number2
       ? Math.pow(value1, value2)
-      : {
-          error: `type error : only type number accepted wrong type at position ${
-            number ? "" : array.findIndex((element) => element === value1) + 1
-          } ${
-            number2 ? "" : array.findIndex((element) => element === value2) + 1
-          }`,
-          status: false,
-        };
+      : `type error : only type number accepted wrong type at position ${
+          number ? "" : array.findIndex((element) => element === value1) + 1
+        } ${
+          number2 ? "" : array.findIndex((element) => element === value2) + 1
+        }`;
   }
 
   /**
@@ -71,10 +64,7 @@ class mathematic {
 
     return number
       ? Math.sqrt(value)
-      : {
-          error: `type error : only type number accepted.`,
-          status: false,
-        };
+      : `type error : only type number accepted.`;
   }
 }
 

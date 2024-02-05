@@ -1,4 +1,4 @@
-const Logger = require("./interface/Logger");
-const logger = new Logger();
+const mathematic = require('./data/mathematic')
+const math = new mathematic()
 
-logger.warn("this is error");
+console.log(math.power(2,4))
