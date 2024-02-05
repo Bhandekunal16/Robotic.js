@@ -54,6 +54,25 @@ class UUID {
 
     return array;
   }
+
+  /**
+   * @param {number} length - optional parameter if want a specific length of the uuid, default is 10.
+   * @function - numeric uuid generation operations
+   * @returns - numeric uuid*/
+  numeric(length) {
+    /** @type {string}*/
+    let number = "";
+    let arrayLength = length == undefined ? 10 : length;
+
+    for (let index = 0; index < arrayLength; index++) {
+      /** @type {number}*/
+      const element = Math.floor(Math.random() * 10);
+
+      number += element;
+    }
+
+    return number;
+  }
 }
 
 module.exports = UUID;
