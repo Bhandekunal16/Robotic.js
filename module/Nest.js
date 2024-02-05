@@ -3,30 +3,10 @@ const NestService = require("./nest.service");
 const NestRepository = require("./nest.repository");
 const NestModule = require("./nest.module");
 const NestDtoCreate = require("./Nest-create-dto");
-
-/**
- * @type {NestController}
- */
 const controller = new NestController();
-
-/**
- * @type {NestService}
- */
 const service = new NestService();
-
-/**
- * @type {NestRepository}
- */
 const repository = new NestRepository();
-
-/**
- * @type {NestDtoCreate}
- */
 const create = new NestDtoCreate();
-
-/**
- * @type {NestModule}
- */
 const Module = new NestModule();
 
 /**

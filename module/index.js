@@ -12,70 +12,18 @@ const Web = require("./static.web");
 const JSON = require("./package");
 const Nest = require("./Nest");
 const Map = require("./map");
-
-/**
- * @type {Logger}
- */
 const logger = new Logger();
-
-/**
- * @type {TypeScript}
- */
 const type = new TypeScript();
-
-/**
- * @type {JavaScript}
- */
 const javaScript = new JavaScript();
-
-/**
- * @type {Binary}
- */
 const bin = new Binary();
-
-/**
- * @type {Java}
- */
 const java = new Java();
-
-/**
- * @type {Go}
- */
 const go = new Go();
-
-/**
- * @type {Python}
- */
 const python = new Python();
-
-/**
- * @type {Css}
- */
 const css = new Css();
-
-/**
- * @type {HTML}
- */
 const html = new HTML();
-
-/**
- * @type {Web}
- */
 const web = new Web();
-
-/**
- * @type {JSON}
- */
 const json = new JSON();
-
-/**
- * @type {Nest}
- */
 const nest = new Nest();
-
-/**
- * @type {Map}
- */
 const map = new Map();
 
 /**

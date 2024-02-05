@@ -1,6 +1,4 @@
 const TypeChecker = require("../class/TypeChecker");
-
-/** @type {TypeChecker}*/
 const type = new TypeChecker();
 
 /**
