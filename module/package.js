@@ -3,9 +3,7 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**
- * Class representing json file operations.
- */
+/**Class representing json file operations.*/
 class JSON {
   fileContent = `{
     "name": "",
@@ -26,11 +24,10 @@ class JSON {
   
 `;
 
-  /**
+  /** 
    * @function : create a dummy json file.
    * @param {string} name - The name of the file.
-   * @returns {string|undefined} The name of the created file or undefined if there's an error.
-   */
+   * @returns {string|undefined} The name of the created file or undefined if there's an error.*/
   create(name) {
     const fileName = `${name}`;
     const folderName = "../../../src";

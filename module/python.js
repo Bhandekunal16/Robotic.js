@@ -3,9 +3,7 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**
- * Class representing python file operations.
- */
+/** Class representing python file operations.*/
 class Python {
   fileContent = `def function_name(parameter1, parameter2):
   # Function body

@@ -3,9 +3,7 @@ const Color = require("./color");
 const time = new Timestamp();
 const color = new Color();
 
-/**
- * class that contain logger operation
- */
+/**class that contain logger operation*/
 class Logger {
   constructor() {
     this.time = time.main();

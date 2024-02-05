@@ -26,15 +26,12 @@ const json = new JSON();
 const nest = new Nest();
 const map = new Map();
 
-/**
- * Class representing module file for file creation operations.
- */
+/** Class representing module file for file creation operations.*/
 class Node {
   /**
    * @function - create file structure and file according your input
    * @param {string} name - The name of the file || class || module || folder.
-   * @returns {string} The name of the created file's or undefined if there's an error.
-   */
+   * @returns {string} The name of the created file's or undefined if there's an error.*/
   create(name) {
     try {
       name.includes(".ts") ? type.create(name) : null;
@@ -62,8 +59,7 @@ class Node {
 
   /**
    * @param {string} userInput - take input from user.
-   * @returns {string} The name of the created file's or undefined if there's an error.
-   */
+   * @returns {string} The name of the created file's or undefined if there's an error.*/
   getUserInput() {
     this.rl.question('Enter something (type "exit" to stop): ', (userInput) => {
       userInput.toLocaleLowerCase() === "exit"
@@ -73,8 +69,7 @@ class Node {
   }
 
   /**
-   * @returns {Array} return array of the class present in the this module.
-   */
+   * @returns {Array} return array of the class present in the this module.*/
   output() {
     let elements = nest.out();
     let elements1 = web.out();

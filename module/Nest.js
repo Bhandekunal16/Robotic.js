@@ -9,9 +9,7 @@ const repository = new NestRepository();
 const create = new NestDtoCreate();
 const Module = new NestModule();
 
-/**
- * Class representing module file for creation of folder structure like nest.js operations.
- */
+/**Class representing module file for creation of folder structure like nest.js operations.*/
 class Nest {
   /**
    * @function create a dummy nest module

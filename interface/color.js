@@ -1,6 +1,4 @@
-/**
- * class that contain name properties
- */
+/**class that contain name properties*/
 class Color {
   constructor() {
     this.black = "\x1b[30m";

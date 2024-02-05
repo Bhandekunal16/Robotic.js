@@ -6,9 +6,7 @@ const html = new HTML();
 const css = new Css();
 const javaScript = new JavaScript();
 
-/**
- * Class representing module file for creation of html,css and javascript file creation operations.
- */
+/** Class representing module file for creation of html,css and javascript file creation operations.*/
 class Web {
   /**
    * @function - create a folder structure useful for static web pages

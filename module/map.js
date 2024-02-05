@@ -3,15 +3,12 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**
- * Class representing javascript file creating with class operation.
- */
+/**Class representing javascript file creating with class operation.*/
 class Map {
   /**
    * @function create a dummy javascript file that contain class.
    * @param {string} name - The name for the file.
-   * @returns {string|undefined} The name of the created file's or undefined if there's an error.
-   */
+   * @returns {string|undefined} The name of the created file's or undefined if there's an error.*/
   create(name) {
     const trimmed = name.split(".")[0];
     const fileName = `${trimmed}.js`;

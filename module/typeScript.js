@@ -3,9 +3,7 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**
- * Class representing Java file operations.
- */
+/** Class representing Java file operations.*/
 class TypeScript {
   fileContent = `
   const main = () => {

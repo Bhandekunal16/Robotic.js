@@ -3,9 +3,7 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**
- * Class representing binary file operations.
- */
+/**Class representing binary file operations.*/
 class Binary {
   fileContent = "1000001";
 
