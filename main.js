@@ -24,11 +24,12 @@ let imports = routes.map((elements) => elements.name);
 app.listen(port, () => {
   logger.log("***************");
   logger.new(imports);
-  logger.log([Node.name] + ' size ' + new FIle("./module/index.js").size());
-  logger.log([Color.name] + ' size ' + new FIle("./interface/color.js").size());
-  logger.log([Logger.name] + ' size ' + new FIle("./interface/Logger.js").size());
+  logger.size([
+    { name: Logger.name, path: "./interface/Logger.js" },
+    { name: Color.name, path: "./interface/color.js" },
+    { name: Node.name, path: "./module/index.js" },
+  ]);
   logger.log(`Node app is successfully created on http://localhost: ${port}.`);
   logger.log("***************");
   node.getUserInput();
-  
 });
