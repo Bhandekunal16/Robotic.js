@@ -18,7 +18,7 @@ class Maintain {
         ? fs.mkdirSync(folderPath, { recursive: true })
         : logger.log("folder already present.");
 
-      fs.writeFile(filePath, value, (err) => {
+      fs.writeFile(filePath, newValue, (err) => {
         err
           ? logger.error("Error creating file:", err)
           : logger.log(`File "${fileName}" created successfully.`);
