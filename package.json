@@ -19,6 +19,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bhandekunal16/Robotic.js.git"
+    "url": "git+https://github.com/Bhandekunal16/Robotic.js.git"
   }
 }
