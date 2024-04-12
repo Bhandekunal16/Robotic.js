@@ -11,7 +11,7 @@ class Response {
   }
 
   error(res, process) {
-    process.status(500);
+    process != undefined ? process.status(500) : null;
     return {
       response: res,
       statusCode: 500,
@@ -21,7 +21,7 @@ class Response {
   }
 
   notFound(res, process) {
-    process.status(404);
+    process != undefined ? process.status(404) : null;
     return {
       response: res,
       statusCode: 404,
@@ -31,7 +31,7 @@ class Response {
   }
 
   badRequest(res, process) {
-    process.status(400);
+    process != undefined ? process.status(400) : null;
     return {
       response: res,
       statusCode: 400,
@@ -41,7 +41,7 @@ class Response {
   }
 
   badGateway(res, process) {
-    process.status(502);
+    process != undefined ? process.status(502) : null;
     return {
       response: res,
       statusCode: 502,
@@ -51,7 +51,7 @@ class Response {
   }
 
   forbidden(res, process) {
-    process.status(401);
+    process != undefined ? process.status(401) : null;
     return {
       response: res,
       statusCode: 401,
@@ -61,7 +61,7 @@ class Response {
   }
 
   serviceUnavailable(res, process) {
-    process.status(503);
+    process != undefined ? process.status(503) : null;
     return {
       response: res,
       statusCode: 503,

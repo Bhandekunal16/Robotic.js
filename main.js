@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const Color = require("./interface/color");
 const Logger = require("./interface/Logger");
 const Node = require("./module/index");
+const Response = require("./class/response");
 require("dotenv").config();
 
 const app = express();
@@ -13,7 +14,7 @@ const logger = new Logger();
 const node = new Node();
 
 app.get("/", async (req, res) => {
-  const query = "hello world";
+  const query = new Response().error("new error");
   res.send(query);
 });
 
