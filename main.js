@@ -14,11 +14,11 @@ const logger = new Logger();
 const node = new Node();
 
 app.get("/", async (req, res) => {
-  const query = new Response().error("new error");
+  const query = new Response().success("hello world!");
   res.send(query);
 });
 
-const routes = [Node, Color, Logger];
+const routes = [Node, Color, Logger, Response];
 let imports = routes.map((elements) => elements.name);
 
 app.listen(port, () => {
