@@ -1,3 +1,4 @@
 /node_modules
 index.js
-src/data/file.js
+/src/data/file.js
+main.js
