@@ -21,5 +21,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bhandekunal16/Robotic.js.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7"
   }
 }
