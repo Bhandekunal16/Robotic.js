@@ -1,7 +1,8 @@
 "use strict";
 exports.__esModule = true;
-var response_1 = require("./types/response");
+var response = require("./src/class/response");
+var Res = new response();
 function main() {
-    return response_1.Response.create("hii");
+    return Res.created("new");
 }
-main();
+console.log(main());
