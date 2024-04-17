@@ -17,12 +17,12 @@ declare class Logger {
      * @param {any} optionalContain
      * @function - create a default log message for success
      */
-    warn(message: any, optionalContain: any): void;
+    warn(message: any, optionalContain?: any): void;
     /**
      * @param {any} message
      * @function - create a default log message for error
      */
-    error(message: any, optionalContain: any): void;
+    error(message: any, optionalContain?: any): void;
     /**
      * @param {*} array - need the array as input.
      * @function - create a custom theme for the logger
