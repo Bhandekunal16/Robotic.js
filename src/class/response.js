@@ -10,7 +10,9 @@ class Response {
     this.ServiceUnavailable = "service unavailable";
   }
 
-  error(res, process, message) {
+  // message, process
+
+  error(res, message, process) {
     process != undefined ? process.status(500) : null;
     const msg = message != undefined ? this.Error : message;
     return {
@@ -21,7 +23,7 @@ class Response {
     };
   }
 
-  notFound(res, process, message) {
+  notFound(res, message, process) {
     process != undefined ? process.status(404) : null;
     const msg = message != undefined ? this.NotFound : message;
     return {
@@ -32,7 +34,7 @@ class Response {
     };
   }
 
-  badRequest(res, process, message) {
+  badRequest(res, message, process) {
     process != undefined ? process.status(400) : null;
     const msg = message != undefined ? this.BadRequest : message;
     return {
@@ -43,7 +45,7 @@ class Response {
     };
   }
 
-  badGateway(res, process, message) {
+  badGateway(res, message, process) {
     process != undefined ? process.status(502) : null;
     const msg = message != undefined ? this.BadGateway : message;
     return {
@@ -54,7 +56,7 @@ class Response {
     };
   }
 
-  forbidden(res, process, message) {
+  forbidden(res, message, process) {
     process != undefined ? process.status(401) : null;
     const msg = message != undefined ? this.Forbidden : message;
     return {
@@ -65,7 +67,7 @@ class Response {
     };
   }
 
-  serviceUnavailable(res, process, message) {
+  serviceUnavailable(res, message, process) {
     process != undefined ? process.status(503) : null;
     const msg = message != undefined ? this.ServiceUnavailable : message;
     return {
