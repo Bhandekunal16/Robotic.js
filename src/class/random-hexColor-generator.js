@@ -1,7 +1,6 @@
 class HexColorGenerator {
   getRandomColor = () => {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
+    let [letters, color] = ["0123456789ABCDEF", "#"];
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
