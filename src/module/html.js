@@ -3,7 +3,6 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/** Class representing HTML file operations.*/
 class HTML {
   fileContent = `<!DOCTYPE html> <html lang="en">
   <head> <title>Your Page Title</title> <link rel="stylesheet" href="styles.css"> </head>
@@ -19,7 +18,7 @@ class HTML {
             <section id="services"> <h2>Our Services</h2> <p>Discover the services we offer to our clients.</p> </section> </main>
     <footer> <p>&copy; 2024 Your Website. All rights reserved.</p> </footer> </body></html>`;
 
-  /** 
+  /**
    * @function create a dummy html file.
    * @param {string} name - The name of the file.
    * @returns {string|undefined} The name of the created file or undefined if there's an error.
