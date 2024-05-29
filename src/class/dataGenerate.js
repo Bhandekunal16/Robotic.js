@@ -89,14 +89,9 @@ class DataGenerator {
         name.push(element);
         array.push(...name);
       }
-      return array.length > 0
-        ? array
-        : {
-            res: "type error : check the type of the length of the array it is not a number.",
-            status: false,
-          };
+      return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      return error;
+      return new Error(error);
     }
   }
 
