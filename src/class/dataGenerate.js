@@ -70,12 +70,7 @@ class DataGenerator {
         name.push(element);
         array.push(...name);
       }
-      return array.length > 0
-        ? array
-        : {
-            res: this.error,
-            status: false,
-          };
+      return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
       return error;
     }
