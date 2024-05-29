@@ -16,8 +16,10 @@ class mathematic {
   }
 
   power(value1, value2) {
-    const number = new TypeChecker().checkNumber(value1);
-    const number2 = new TypeChecker().checkNumber(value2);
+    const [number, number2] = [
+      new TypeChecker().checkNumber(value1),
+      new TypeChecker().checkNumber(value2),
+    ];
     let array = [value1, value2];
 
     return number && number2
