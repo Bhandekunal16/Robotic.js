@@ -54,8 +54,7 @@ class UUID {
       value += string;
     }
     const buffer = Buffer.from(value, "utf-8");
-    const hexadecimalString = buffer.toString("hex");
-    return hexadecimalString;
+    return buffer.toString("hex");
   }
 }
 
