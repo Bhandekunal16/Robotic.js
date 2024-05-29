@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
 
 class Maintain {
   log(value) {
@@ -20,12 +19,12 @@ class Maintain {
 
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : logger.log("folder already present.");
+        : new Logger().log("folder already present.");
 
       fs.writeFile(filePath, newValue, { flag: "a" }, (err) => {
         err
-          ? logger.error("Error creating file:", err)
-          : logger.log(
+          ? new Logger().error("Error creating file:", err)
+          : new Logger().log(
               `Message "${newValue.trim()}" appended to "${fileName}" successfully.`
             );
       });
