@@ -32,7 +32,7 @@ class mathematic {
   }
 
   squareRoot(value) {
-    const number = type.checkNumber(value);
+    const number = new TypeChecker().checkNumber(value);
     return number
       ? Math.sqrt(value)
       : `type error : only type number accepted.`;
