@@ -47,10 +47,6 @@ class UUID {
     return number;
   }
 
-  /**
-   * @function - give the vectorized uuid string.
-   * @returns -  returns vectorized uuid string
-   */
   vectorized() {
     let value = "";
     for (let index = 0; index < 10; index++) {
