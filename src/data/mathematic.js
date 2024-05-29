@@ -21,7 +21,6 @@ class mathematic {
       new TypeChecker().checkNumber(value2),
     ];
     let array = [value1, value2];
-
     return number && number2
       ? Math.pow(value1, value2)
       : `type error : only type number accepted wrong type at position ${
