@@ -44,7 +44,6 @@ class UUID {
 
     for (let index = 0; index < arrayLength; index++) {
       const element = Math.floor(Math.random() * 10);
-
       number += element;
     }
 
