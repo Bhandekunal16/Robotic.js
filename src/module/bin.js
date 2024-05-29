@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
 
 class Binary {
   fileContent = "1000001";
@@ -16,19 +15,19 @@ class Binary {
 
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
-      } else logger.log("Folder already present.");
+      } else new Logger().log("Folder already present.");
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         if (err) {
-          logger.error("Error creating file:", err);
+          new Logger().error("Error creating file:", err);
           return undefined;
         } else {
-          logger.log(`File "${fileName}" created successfully.`);
+          new Logger().log(`File "${fileName}" created successfully.`);
           return fileName;
         }
       });
     } catch (error) {
-      logger.error(error);
+      new Logger().error(error);
       return error;
     }
   }
