@@ -91,7 +91,6 @@ class DataGenerator {
             this.consonants[Math.floor(Math.random() * 20)] +
             this.ovals[Math.floor(Math.random() * 5)];
         }
-
         name.push(element);
         array.push(...name);
       }
