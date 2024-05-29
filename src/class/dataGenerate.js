@@ -1,5 +1,4 @@
 const TypeChecker = require("./TypeChecker");
-const typeChecker = new TypeChecker();
 
 class DataGenerator {
   constructor() {
