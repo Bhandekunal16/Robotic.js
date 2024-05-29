@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const Color = require("./interface/color");
-const Logger = require("./interface/Logger");
-const Node = require("./module/index");
-const Response = require("./class/response");
+const Color = require("./src/interface/color");
+const Logger = require("./src/interface/Logger");
+const Node = require("./src/module/index");
+const Response = require("./src/class/response");
 require("dotenv").config();
 
 const app = express();
