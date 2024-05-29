@@ -7,10 +7,11 @@ const [fs, path, Logger] = [
 class Maintain {
   log(value) {
     try {
-      const date = new Date();
-      const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1)
+      const formattedDate = `${new Date().getFullYear()}-${(
+        new Date().getMonth() + 1
+      )
         .toString()
-        .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+        .padStart(2, "0")}-${new Date().getDate().toString().padStart(2, "0")}`;
       const newValue = `${new Date().toLocaleString()} - [LOG] ${value}\n`;
       const [folderName, fileName] = ["../../../logs", `${formattedDate}.log`];
       const folderPath = path.join(__dirname, `${folderName}/${fileName}`);
