@@ -41,7 +41,6 @@ class UUID {
   numeric(length) {
     let number = "";
     let arrayLength = length == undefined ? 10 : length;
-
     for (let index = 0; index < arrayLength; index++) {
       number += Math.floor(Math.random() * 10);
     }
