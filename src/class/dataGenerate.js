@@ -59,9 +59,8 @@ class DataGenerator {
 
   generateMobileNumber(length) {
     try {
-      let array = [];
       for (let index = 0; index < length; index++) {
-        let [name, element] = [[], ""];
+        let [name, element, array] = [[], "", []];
         for (let j = 0; j < 10; j++) {
           element += Math.floor(Math.random() * 10);
         }
