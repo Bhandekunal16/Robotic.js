@@ -59,8 +59,9 @@ class DataGenerator {
 
   generateMobileNumber(length) {
     try {
-      const [array, name] = [[], []];
+      let array = [];
       for (let index = 0; index < length; index++) {
+        let name = [];
         let element = "";
         for (let j = 0; j < 10; j++) {
           element += Math.floor(Math.random() * 10);
@@ -78,15 +79,17 @@ class DataGenerator {
       return error;
     }
   }
-  
+
+  /**
+   * @function - generate various random name
+   * @param {number} length - how many data you want to generate.
+   * @returns {string[]} generate array that contain dummy data.*/
   generateRandomName(length) {
     try {
-      let array = [];
-
+      const array = [];
       for (let index = 0; index < length; index++) {
-        let name = [];
+        const name = [];
         let element = "";
-
         for (let j = 1; j < 4; j++) {
           element +=
             this.consonants[Math.floor(Math.random() * 20)] +
@@ -152,3 +155,5 @@ class DataGenerator {
 }
 
 module.exports = DataGenerator;
+
+console.log(new DataGenerator().create(10, "mobileNo"));
