@@ -122,4 +122,3 @@ class DataGenerator {
 }
 
 module.exports = DataGenerator;
-
