@@ -28,7 +28,6 @@ class UUID {
 
   alphanumeric() {
     let array = "";
-
     for (let index = 0; index < 4; index++) {
       const uuid =
         this.randomAlphabet().toLocaleUpperCase() +
