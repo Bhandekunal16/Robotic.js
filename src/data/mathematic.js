@@ -1,5 +1,4 @@
 const TypeChecker = require("../class/TypeChecker");
-const type = new TypeChecker();
 
 class mathematic {
   algebra(value) {
@@ -17,8 +16,8 @@ class mathematic {
   }
 
   power(value1, value2) {
-    const number = type.checkNumber(value1);
-    const number2 = type.checkNumber(value2);
+    const number = new TypeChecker().checkNumber(value1);
+    const number2 = new TypeChecker().checkNumber(value2);
     let array = [value1, value2];
 
     return number && number2
