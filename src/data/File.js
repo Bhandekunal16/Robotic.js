@@ -1,6 +1,4 @@
-const path = require("path");
-const fs = require("fs");
-const ms = require("fs/promises");
+const [path, fs, ms] = [require("path"), require("fs"), require("fs/promises")];
 
 class File {
   constructor(file) {
