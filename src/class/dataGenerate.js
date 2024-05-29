@@ -73,7 +73,7 @@ class DataGenerator {
       return array.length > 0
         ? array
         : {
-            res: "type error : check the type of the length of the array it is not a number.",
+            res: this.error,
             status: false,
           };
     } catch (error) {
