@@ -1,5 +1,4 @@
-const Color = require("./color");
-const Time = require("./time");
+const [Color, Time] = [require("./color"), require("./time")];
 
 class Logger {
   constructor() {
