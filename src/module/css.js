@@ -11,12 +11,6 @@ class Css {
   nav a { color: #ecf0f1; text-decoration: none; margin-right: 1em; }
   main { padding: 1em; }
   footer { background-color: #2c3e50; color: #ecf0f1; padding: 1em; text-align: center;}`;
-
-  /**
-   * @function Creates a CSS file with the specified name.
-   * @param {string} name - The name of the file.
-   * @returns {string|undefined} The name of the created file or undefined if there's an error.
-   */
   create(name) {
     const fileName = `${name}`;
     const folderName = "../../../src";
