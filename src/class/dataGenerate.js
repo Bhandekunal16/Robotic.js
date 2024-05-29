@@ -60,7 +60,6 @@ class DataGenerator {
   generateMobileNumber(length) {
     try {
       const [array, name] = [[], []];
-
       for (let index = 0; index < length; index++) {
         let element = "";
         for (let j = 0; j < 10; j++) {
