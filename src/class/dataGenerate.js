@@ -95,10 +95,6 @@ class DataGenerator {
     }
   }
 
-  /**
-   * @function - generate various random email
-   * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.*/
   generateRandomEmail(length) {
     try {
       let array = [];
