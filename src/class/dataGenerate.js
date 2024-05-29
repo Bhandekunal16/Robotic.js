@@ -36,20 +36,16 @@ class DataGenerator {
       typeChecker.checkNumber(length),
       typeChecker.checkString(type),
     ];
-
     const lengthValue = checkLength && checkType ? length : 0;
-
     try {
       let value;
       switch (true) {
         case type == "name":
           value = this.generateRandomName(lengthValue);
           return value;
-
         case type == "mobileNo":
           value = this.generateMobileNumber(lengthValue);
           return value;
-
         case type == "email":
           value = this.generateRandomEmail(lengthValue);
           return value;
