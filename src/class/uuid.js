@@ -59,5 +59,3 @@ class UUID {
 }
 
 module.exports = UUID;
-
-console.log(new UUID().vectorized());
