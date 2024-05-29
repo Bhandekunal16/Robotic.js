@@ -80,8 +80,7 @@ class DataGenerator {
     try {
       const array = [];
       for (let index = 0; index < length; index++) {
-        const name = [];
-        let element = "";
+        let [name, element] = [[], ""];
         for (let j = 1; j < 4; j++) {
           element +=
             this.consonants[Math.floor(Math.random() * 20)] +
