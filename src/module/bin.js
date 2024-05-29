@@ -16,9 +16,7 @@ class Binary {
 
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
-      } else {
-        logger.log("Folder already present.");
-      }
+      } else logger.log("Folder already present.");
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         if (err) {
