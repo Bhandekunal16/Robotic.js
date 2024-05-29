@@ -10,7 +10,6 @@ require("dotenv").config();
 
 const app = express();
 app.use(bodyParser.json());
-const port = process.env.LOCALHOST;
 
 app.get("/", async (req, res) => {
   const query = new Response().success("hello world!");
@@ -24,7 +23,7 @@ app.listen(port, () => {
   new Logger().log("***************");
   new Logger().new(imports);
   new Logger().log(
-    `Node app is successfully created on http://localhost: ${port}.`
+    `Node app is successfully created on http://localhost: ${process.env.LOCALHOST}.`
   );
   new Logger().log("***************");
   new Node().getUserInput();
