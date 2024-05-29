@@ -17,9 +17,7 @@ class Go {
 
       if (!fs.existsSync(folderPath))
         fs.mkdirSync(folderPath, { recursive: true });
-      else {
-        new Logger().log("Folder already present.");
-      }
+      else new Logger().log("Folder already present.");
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
