@@ -8,10 +8,6 @@ class Logger {
     this.time = time.main();
   }
 
-  /**
-   * @param {*} services
-   * @function - create a custom theme for the logger
-   */
   new(services) {
     services.forEach((service) => {
       console.log(
