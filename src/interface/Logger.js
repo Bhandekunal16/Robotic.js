@@ -1,8 +1,9 @@
 const Color = require("./color");
+const Time = require("./time");
 
 class Logger {
   constructor() {
-    this.time = time.main();
+    this.time = new Time().main();
   }
 
   new(services) {
