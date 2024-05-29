@@ -12,7 +12,6 @@ const app = express();
 app.use(bodyParser.json());
 const port = process.env.LOCALHOST;
 
-const logger = new Logger();
 const node = new Node();
 
 app.get("/", async (req, res) => {
@@ -24,9 +23,11 @@ const routes = [Node, Color, Logger, Response];
 let imports = routes.map((elements) => elements.name);
 
 app.listen(port, () => {
-  logger.log("***************");
-  logger.new(imports);
-  logger.log(`Node app is successfully created on http://localhost: ${port}.`);
-  logger.log("***************");
+  new Logger().log("***************");
+  new Logger().new(imports);
+  new Logger().log(
+    `Node app is successfully created on http://localhost: ${port}.`
+  );
+  new Logger().log("***************");
   node.getUserInput();
 });
