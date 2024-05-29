@@ -24,11 +24,6 @@ class Logger {
     );
   }
 
-  /**
-   * @param {any} message
-   * @param {any} optionalContain
-   * @function - create a default log message for success
-   */
   warn(message, optionalContain) {
     console.log(
       `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${
