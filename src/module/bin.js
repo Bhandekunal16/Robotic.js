@@ -5,9 +5,11 @@ const Logger = require("../interface/Logger");
 class Binary {
   fileContent = "1000001";
   create(name) {
-    const fileName = `${name}`;
-    const trimmed = name.split(".")[0];
-    const folderName = "../../../src";
+    const [fileName, trimmed, folderName] = [
+      `${name}`,
+      name.split(".")[0],
+      "../../../src",
+    ];
 
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
