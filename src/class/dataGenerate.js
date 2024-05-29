@@ -33,8 +33,8 @@ class DataGenerator {
 
   create(length, type) {
     const [checkLength, checkType] = [
-      typeChecker.checkNumber(length),
-      typeChecker.checkString(type),
+      new TypeChecker().checkNumber(length),
+      new TypeChecker().checkString(type),
     ];
     const lengthValue = checkLength && checkType ? length : 0;
     try {
