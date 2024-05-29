@@ -72,7 +72,7 @@ class DataGenerator {
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      return error;
+      return new Error(error);
     }
   }
 
