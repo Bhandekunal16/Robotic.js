@@ -29,16 +29,16 @@ class Css {
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
       } else {
-        logger.log("Folder already present.");
+        new Logger().log("Folder already present.");
       }
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
-          ? logger.error("Error creating file:", err)
-          : logger.log(`File "${fileName}" created successfully.`);
+          ? new Logger().error("Error creating file:", err)
+          : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      logger.error(error);
+      new Logger().error(error);
       return error;
     }
   }
