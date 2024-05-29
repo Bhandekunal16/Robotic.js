@@ -61,8 +61,7 @@ class DataGenerator {
     try {
       let array = [];
       for (let index = 0; index < length; index++) {
-        let name = [];
-        let element = "";
+        let [name, element] = [[], ""];
         for (let j = 0; j < 10; j++) {
           element += Math.floor(Math.random() * 10);
         }
