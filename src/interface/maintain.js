@@ -16,11 +16,9 @@ class Maintain {
       const fileName = `${formattedDate}.log`;
       const folderPath = path.join(__dirname, `${folderName}/${fileName}`);
       const filePath = path.join(folderPath, fileName);
-
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log("folder already present.");
-
       fs.writeFile(filePath, newValue, { flag: "a" }, (err) => {
         err
           ? new Logger().error("Error creating file:", err)
