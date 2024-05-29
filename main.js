@@ -12,8 +12,6 @@ const app = express();
 app.use(bodyParser.json());
 const port = process.env.LOCALHOST;
 
-const node = new Node();
-
 app.get("/", async (req, res) => {
   const query = new Response().success("hello world!");
   res.send(query);
@@ -29,5 +27,5 @@ app.listen(port, () => {
     `Node app is successfully created on http://localhost: ${port}.`
   );
   new Logger().log("***************");
-  node.getUserInput();
+  new Node().getUserInput();
 });
