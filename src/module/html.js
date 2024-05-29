@@ -17,12 +17,6 @@ class HTML {
             <section id="about"> <h2>About Us</h2> <p>Learn more about our company and values.</p> </section>
             <section id="services"> <h2>Our Services</h2> <p>Discover the services we offer to our clients.</p> </section> </main>
     <footer> <p>&copy; 2024 Your Website. All rights reserved.</p> </footer> </body></html>`;
-
-  /**
-   * @function create a dummy html file.
-   * @param {string} name - The name of the file.
-   * @returns {string|undefined} The name of the created file or undefined if there's an error.
-   */
   create(name) {
     const fileName = `${name}`;
     const folderName = "../../../src";
@@ -34,16 +28,16 @@ class HTML {
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath, { recursive: true });
       } else {
-        logger.log("Folder already present.");
+        new Logger().log("Folder already present.");
       }
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
-          ? logger.error("Error creating file:", err)
-          : logger.log(`File "${fileName}" created successfully.`);
+          ? new Logger().error("Error creating file:", err)
+          : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      logger.error(error);
+      new Logger().error(error);
       return error;
     }
   }
