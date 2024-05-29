@@ -1,3 +1,5 @@
+const { FILE } = require("dns");
+
 const [path, fs, ms] = [require("path"), require("fs"), require("fs/promises")];
 
 class File {
