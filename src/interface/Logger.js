@@ -26,7 +26,7 @@ class Logger {
 
   warn(message, optionalContain) {
     console.log(
-      `${color.yellow}  [NODE] : WARN ${color.white} ${message} ${
+      `${new Color().yellow}  [NODE] : WARN ${new Color().white} ${message} ${
         optionalContain ?? ""
       }`
     );
