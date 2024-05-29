@@ -78,11 +78,7 @@ class DataGenerator {
       return error;
     }
   }
-
-  /**
-   * @function - generate various random name
-   * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.*/
+  
   generateRandomName(length) {
     try {
       let array = [];
