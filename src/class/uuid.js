@@ -1,9 +1,4 @@
-/** class contains the uuid generating  operations.*/
 class UUID {
-  /**
-   * @function -random alphabet generator function, used to generate random alphabets for uuids.
-   * @returns - returns a random alphabetic character from 'a'-'z'.
-   */
   randomAlphabet() {
     const consonants = [
       "b",
@@ -28,14 +23,9 @@ class UUID {
       "y",
       "z",
     ];
-    const randomIndex = Math.floor(Math.random() * consonants.length);
-
-    return consonants[randomIndex];
+    return consonants[Math.floor(Math.random() * consonants.length)];
   }
 
-  /**
-   * @function- generate alphanumeric UUID operation
-   * @returns - alphanumeric UUID string*/
   alphanumeric() {
     let array = "";
 
