@@ -29,6 +29,8 @@ class DataGenerator {
     ];
     this.ovals = ["a", "e", "i", "o", "u"];
     this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
+    this.error =
+      "type error : check the type of the length of the array it is not a number.";
   }
 
   create(length, type) {
