@@ -11,9 +11,11 @@ class Logger {
   new(services) {
     services.forEach((service) => {
       console.log(
-        `${color.green}${new Date().toLocaleDateString()} [NODE] ${this.time} ${
-          color.yellow
-        } [SERVICE] ${color.green} ${service.toUpperCase()} `
+        `${new Color().green}${new Date().toLocaleDateString()} [NODE] ${
+          this.time
+        } ${new Color().yellow} [SERVICE] ${
+          new Color().green
+        } ${service.toUpperCase()} `
       );
     });
   }
