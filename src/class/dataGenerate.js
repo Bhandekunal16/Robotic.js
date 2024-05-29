@@ -46,15 +46,20 @@ class DataGenerator {
 
     try {
       let value;
-      if (type == "name") {
-        value = this.generateRandomName(lengthValue);
-        return value;
-      } else if (type == "mobileNo") {
-        value = this.generateMobileNumber(lengthValue);
-        return value;
-      } else if (type == "email") {
-        value = this.generateRandomEmail(lengthValue);
-        return value;
+      switch (type) {
+        case type == "name":
+          value = this.generateRandomName(lengthValue);
+          return value;
+
+        case type == "mobileNo":
+          value = this.generateMobileNumber(lengthValue);
+          return value;
+
+        case type == "email":
+          value = this.generateRandomEmail(lengthValue);
+          return value;
+        default:
+          break;
       }
     } catch (error) {
       return error;
