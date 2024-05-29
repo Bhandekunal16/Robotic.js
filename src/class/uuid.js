@@ -23,7 +23,7 @@ class UUID {
       "y",
       "z",
     ];
-    return consonants[Math.floor(Math.random() * consonants.length)];
+    return consonants[Math.floor(Math.random() * consonants.length);];
   }
 
   alphanumeric() {
@@ -74,3 +74,4 @@ class UUID {
 }
 
 module.exports = UUID;
+
