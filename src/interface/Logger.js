@@ -47,20 +47,6 @@ class Logger {
       );
     });
   }
-
-  // /**
-  //  * @param {Array} array - need the array as input.
-  //  * @function - create a custom theme for the logger
-  //  */
-  // size(array) {
-  //   array.forEach((array) => {
-  //     console.log(
-  //       `${color.green}${new Date().toLocaleDateString()} [NODE] ${this.time} ${
-  //         color.yellow
-  //       } [${array.name}] ${new FIle(array.path).size()}`
-  //     );
-  //   });
-  // }
 }
 
 module.exports = Logger;
