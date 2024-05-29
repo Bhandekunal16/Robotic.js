@@ -19,7 +19,7 @@ app.get("/", async (req, res) => {
 const routes = [Node, Color, Logger, Response];
 let imports = routes.map((elements) => elements.name);
 
-app.listen(port, () => {
+app.listen(process.env.LOCALHOST, () => {
   new Logger().log("***************");
   new Logger().new(imports);
   new Logger().log(
