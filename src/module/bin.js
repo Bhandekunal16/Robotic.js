@@ -5,12 +5,6 @@ const logger = new Logger();
 
 class Binary {
   fileContent = "1000001";
-
-  /**
-   * @function create a dummy bin file.
-   * @param {string} name - The name of the file.
-   * @returns {string|undefined} The name of the created file or undefined if there's an error.
-   */
   create(name) {
     const fileName = `${name}`;
     const trimmed = name.split(".")[0];
