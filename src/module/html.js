@@ -24,11 +24,9 @@ class HTML {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
 
-      if (!fs.existsSync(folderPath)) {
+      if (!fs.existsSync(folderPath))
         fs.mkdirSync(folderPath, { recursive: true });
-      } else {
-        new Logger().log("Folder already present.");
-      }
+      else new Logger().log("Folder already present.");
 
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
