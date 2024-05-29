@@ -30,12 +30,7 @@ class DataGenerator {
     this.ovals = ["a", "e", "i", "o", "u"];
     this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
   }
-  /**
-   * @function - generate various type of data like name || mobile number || email
-   * @param {number} length - how many data you want to generate.
-   * @param {string} type - name || mobileNo || email.
-   * @returns {string[]} generate array that contain dummy data.
-   */
+
   create(length, type) {
     const [checkLength, checkType] = [
       typeChecker.checkNumber(length),
@@ -46,7 +41,7 @@ class DataGenerator {
 
     try {
       let value;
-      switch (type) {
+      switch (true) {
         case type == "name":
           value = this.generateRandomName(lengthValue);
           return value;
