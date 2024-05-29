@@ -15,9 +15,9 @@ class Go {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
 
-      if (!fs.existsSync(folderPath)) {
+      if (!fs.existsSync(folderPath))
         fs.mkdirSync(folderPath, { recursive: true });
-      } else {
+      else {
         new Logger().log("Folder already present.");
       }
 
