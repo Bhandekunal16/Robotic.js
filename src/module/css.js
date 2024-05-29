@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
 
 class Css {
   fileContent = `body, h1, p { margin: 0; padding: 0;}
