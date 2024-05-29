@@ -3,7 +3,6 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/** Class representing CSS file operations.*/
 class Css {
   fileContent = `body, h1, p { margin: 0; padding: 0;}
   body { font-family: 'Arial', sans-serif; background-color: #f0f0f0; color: #333; }
