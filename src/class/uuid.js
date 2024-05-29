@@ -38,10 +38,6 @@ class UUID {
     return array;
   }
 
-  /**
-   * @param {number} length - optional parameter if want a specific length of the uuid, default is 10.
-   * @function - numeric uuid generation operations
-   * @returns - numeric uuid*/
   numeric(length) {
     let number = "";
     let arrayLength = length == undefined ? 10 : length;
