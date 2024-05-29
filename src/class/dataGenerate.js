@@ -112,18 +112,13 @@ class DataGenerator {
     }
   }
 
-  /**
-   * @function - captcha generating operations
-   * @return - eight digit random captcha code.*/
   captcha() {
     let element = "";
-
     for (let j = 1; j < 5; j++) {
       element +=
         this.consonants[Math.floor(Math.random() * 10)].toLocaleUpperCase() +
         this.ovals[Math.floor(Math.random() * 5)];
     }
-
     return element;
   }
 }
