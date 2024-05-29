@@ -43,8 +43,7 @@ class UUID {
     let arrayLength = length == undefined ? 10 : length;
 
     for (let index = 0; index < arrayLength; index++) {
-      const element = Math.floor(Math.random() * 10);
-      number += element;
+      number += Math.floor(Math.random() * 10);
     }
 
     return number;
