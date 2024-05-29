@@ -57,10 +57,6 @@ class DataGenerator {
     }
   }
 
-  /**
-   * @function - generate various random mobile Number
-   * @param {number} length - how many data you want to generate.
-   * @returns {string[]} generate array that contain dummy data.*/
   generateMobileNumber(length) {
     try {
       let array = [];
