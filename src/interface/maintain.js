@@ -11,11 +11,9 @@ class Maintain {
       const formattedDate = `${date.getFullYear()}-${(date.getMonth() + 1)
         .toString()
         .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
-
       const newValue = `${new Date().toLocaleString()} - [LOG] ${value}\n`;
       const folderName = "../../../logs";
       const fileName = `${formattedDate}.log`;
-
       const folderPath = path.join(__dirname, `${folderName}/${fileName}`);
       const filePath = path.join(folderPath, fileName);
 
