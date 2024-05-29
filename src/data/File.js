@@ -10,8 +10,7 @@ class File {
 
   size() {
     const fileSizeInKilobytes = fs.statSync(this.filePath).size / 1024;
-    const fileSizeFormatted = fileSizeInKilobytes.toFixed(2) + " KB";
-    return fileSizeFormatted;
+    return fileSizeInKilobytes.toFixed(2) + " KB";
   }
 
   name() {
