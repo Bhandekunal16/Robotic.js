@@ -1,9 +1,4 @@
-/** class contains color generating operation.*/
 class HexColorGenerator {
-  /**
-   * @function -color generating operation
-   * @returns  -random hex color.
-   */
   getRandomColor = () => {
     const letters = "0123456789ABCDEF";
     let color = "#";
