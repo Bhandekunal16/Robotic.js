@@ -53,7 +53,7 @@ class DataGenerator {
           break;
       }
     } catch (error) {
-      return error;
+      return new Error(error);
     }
   }
 
