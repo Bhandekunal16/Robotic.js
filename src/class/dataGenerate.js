@@ -37,8 +37,11 @@ class DataGenerator {
    * @returns {string[]} generate array that contain dummy data.
    */
   create(length, type) {
-    const checkLength = typeChecker.checkNumber(length);
-    const checkType = typeChecker.checkString(type);
+    const [checkLength, checkType] = [
+      typeChecker.checkNumber(length),
+      typeChecker.checkString(type),
+    ];
+
     const lengthValue = checkLength && checkType ? length : 0;
 
     try {
@@ -117,7 +120,7 @@ class DataGenerator {
     }
   }
 
-  /** 
+  /**
    * @function - generate various random email
    * @param {number} length - how many data you want to generate.
    * @returns {string[]} generate array that contain dummy data.*/
