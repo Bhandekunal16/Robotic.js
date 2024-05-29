@@ -1,7 +1,5 @@
 const Timestamp = require("./time");
 const Color = require("./color");
-const time = new Timestamp();
-const color = new Color();
 
 class Logger {
   constructor() {
@@ -20,12 +18,10 @@ class Logger {
     });
   }
 
-  /**
-   * @param {any} message
-   * @function - create a default log message for success
-   */
   log(message) {
-    console.log(`${color.green}  [NODE] : ${color.white} ${message}`);
+    console.log(
+      `${new Color().green}  [NODE] : ${new Color().white} ${message}`
+    );
   }
 
   /**
