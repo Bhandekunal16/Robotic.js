@@ -1,4 +1,3 @@
-const Timestamp = require("./time");
 const Color = require("./color");
 
 class Logger {
