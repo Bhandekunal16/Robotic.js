@@ -124,5 +124,3 @@ class DataGenerator {
 }
 
 module.exports = DataGenerator;
-
-console.log(new DataGenerator().create(10, "name"));
