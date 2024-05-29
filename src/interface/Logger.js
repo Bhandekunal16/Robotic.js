@@ -32,26 +32,18 @@ class Logger {
     );
   }
 
-  /**
-   * @param {any} message
-   * @function - create a default log message for error
-   */
   error(message, optionalContain) {
     console.log(
-      `${color.red}  [NODE] : ERROR ${message} ${optionalContain ?? ""}`
+      `${new Color().red}  [NODE] : ERROR ${message} ${optionalContain ?? ""}`
     );
   }
 
-  /**
-   * @param {*} array - need the array as input.
-   * @function - create a custom theme for the logger
-   */
   array(array) {
     array.forEach((array) => {
       console.log(
-        `${color.green}${new Date().toLocaleDateString()} [NODE] - ${
+        `${new Color().green}${new Date().toLocaleDateString()} [NODE] - ${
           this.time
-        }-${color.yellow}${array.toUpperCase()} `
+        }-${new Color().yellow}${array.toUpperCase()} `
       );
     });
   }
