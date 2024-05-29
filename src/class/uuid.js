@@ -35,7 +35,6 @@ class UUID {
         Math.floor(Math.random() * 100);
       array += uuid;
     }
-
     return array;
   }
 
