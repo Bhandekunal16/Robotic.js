@@ -32,3 +32,5 @@ class File {
 }
 
 module.exports = File;
+
+console.log(new File("./mathematic.js").size());
