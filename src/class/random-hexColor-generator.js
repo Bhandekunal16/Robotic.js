@@ -10,4 +10,3 @@ class HexColorGenerator {
 
 module.exports = HexColorGenerator;
 
-console.log(new HexColorGenerator().getRandomColor())
