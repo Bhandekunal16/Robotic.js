@@ -7,10 +7,9 @@ class mathematic {
   }
 
   arrayAddition(array) {
-    const value = array.reduce((accumulator, currentValue) => {
+    return array.reduce((accumulator, currentValue) => {
       return accumulator + currentValue * 1;
     }, 0);
-    return value;
   }
 
   absolute(value) {
