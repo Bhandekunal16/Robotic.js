@@ -1,7 +1,6 @@
 const TypeChecker = require("./TypeChecker");
 const typeChecker = new TypeChecker();
 
-/**class that contain methods that generate random data*/
 class DataGenerator {
   constructor() {
     this.consonants = [
