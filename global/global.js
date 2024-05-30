@@ -47,6 +47,10 @@ class Type {
     this.package = `{ "name": "", "version": "1.0.0", "description": "", "main": "main.js",
     "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "", "build": "" },
     "author": "", "license": "ISC","dependencies": { } }`;
+    /** @type string */
+    this.python = `def function_name(parameter1, parameter2):
+    return return_value
+    result = function_name(value1, value2)`;
   }
 }
 
