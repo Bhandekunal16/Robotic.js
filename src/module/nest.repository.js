@@ -12,12 +12,10 @@ class NestRepository {
                             @Injectable()
                             export class ${name}Repository { private readonly data: string[] = [];
                             findAll(): string[] { return this.data; } }`;
-      const [fileName, folderName] = [
-        `${name + ".repository.ts"}`,
-        new Type().path,
-      ];
+      const fileName = `${name + ".repository.ts"}`;
+
       try {
-        const folderPath = path.join(__dirname, `${folderName}/${name}`);
+        const folderPath = path.join(__dirname, `${new Type().path}/${name}`);
         const filePath = path.join(folderPath, fileName);
         !fs.existsSync(folderPath)
           ? fs.mkdirSync(folderPath, { recursive: true })
