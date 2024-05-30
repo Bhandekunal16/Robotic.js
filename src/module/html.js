@@ -19,7 +19,7 @@ class HTML {
         : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, new Global().html, (err) => {
         err
-          ? new Logger().error(err)
+          ? new Error(error)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
