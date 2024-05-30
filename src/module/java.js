@@ -5,10 +5,6 @@ const [fs, path, Logger, Global] = [
   require("../../global/global"),
 ];
 class Java {
-  fileContent = `public class MyClass {
-    public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) { return returnValue;}
-    public static void main(String[] args) {
-        ReturnType result = myFunction(value1, value2);}}`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
@@ -21,9 +17,9 @@ class Java {
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log(new Global().alreadyPresent);
-      fs.writeFile(filePath, this.fileContent, (err) => {
+      fs.writeFile(filePath, new Global().java, (err) => {
         err
-          ? new Error(error)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {

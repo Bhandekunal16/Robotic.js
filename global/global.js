@@ -29,6 +29,10 @@ class Global {
                 <section id="services"> <h2>Our Services</h2> <p>Discover the services we offer to our clients.</p> </section> </main>
         <footer> <p>&copy; 2024 Your Website. All rights reserved.</p> </footer> </body></html>`;
     this.start = 'Enter something (type "exit" to stop): ';
+    this.java = `public class MyClass {
+      public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) { return returnValue;}
+      public static void main(String[] args) {
+          ReturnType result = myFunction(value1, value2);}}`;
   }
 }
 
