@@ -11,8 +11,10 @@ class NestRepository {
                             @Injectable()
                             export class ${name}Repository { private readonly data: string[] = [];
                             findAll(): string[] { return this.data; } }`;
-      const fileName = `${name + ".repository.ts"}`;
-      const folderName = "../../../src";
+      const [fileName, folderName] = [
+        `${name + ".repository.ts"}`,
+        "../../../src",
+      ];
       try {
         const folderPath = path.join(__dirname, `${folderName}/${name}`);
         const filePath = path.join(folderPath, fileName);
