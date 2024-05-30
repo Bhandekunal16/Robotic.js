@@ -21,9 +21,7 @@ class Java {
         // Perform actions with the result if needed
         // ...
     }
-}
-`;
-
+}`;
   create(name) {
     const fileName = `${name}`;
     const folderName = "../../../src";
