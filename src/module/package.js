@@ -16,7 +16,7 @@ class JSON {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("folder already present.");
+        : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, new Type().package, (err) => {
         err
           ? new Logger().error("Error creating file:", err)
