@@ -4,8 +4,6 @@ const [fs, path, Logger] = [
   require("../interface/Logger"),
 ];
 class TypeScript {
-  fileContent = `
-  const main = () => {try{ } catch(error){ return {res: error, status: false, msg: 'error'} }}`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
