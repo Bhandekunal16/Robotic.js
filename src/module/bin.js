@@ -17,7 +17,7 @@ class Binary {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("Folder already present.");
+        : new Logger().log(new global().alreadyPresent);
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
           ? new Error(err)
