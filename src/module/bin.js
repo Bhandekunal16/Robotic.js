@@ -3,7 +3,6 @@ const [fs, path, Logger] = [
   require("path"),
   require("../interface/Logger"),
 ];
-
 class Binary {
   fileContent = "1000001";
   create(name) {
