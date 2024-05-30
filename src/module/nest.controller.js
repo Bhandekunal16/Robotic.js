@@ -14,8 +14,10 @@ class NestController {
                           constructor(private readonly ${name}Service: ${name}Service) {}
                           @Post(@Body() body: create${name}Dto)
                           findAll(): string[] { return this.${name}Service.findAll();}}`;
-      const fileName = `${name + ".controller.ts"}`;
-      const folderName = "../../../src";
+      const [fileName, folderName] = [
+        `${name + ".controller.ts"}`,
+        "../../../src",
+      ];
       try {
         const folderPath = path.join(__dirname, `${folderName}/${name}`);
         const filePath = path.join(folderPath, fileName);
