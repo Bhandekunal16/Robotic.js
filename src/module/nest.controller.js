@@ -15,12 +15,9 @@ class NestController {
                           constructor(private readonly ${name}Service: ${name}Service) {}
                           @Post(@Body() body: create${name}Dto)
                           findAll(): string[] { return this.${name}Service.findAll();}}`;
-      const [fileName, folderName] = [
-        `${name + ".controller.ts"}`,
-        new Type().path,
-      ];
+      const [fileName] = [`${name + ".controller.ts"}`];
       try {
-        const folderPath = path.join(__dirname, `${folderName}/${name}`);
+        const folderPath = path.join(__dirname, `${new Type().path}/${name}`);
         const filePath = path.join(folderPath, fileName);
         !fs.existsSync(folderPath)
           ? fs.mkdirSync(folderPath, { recursive: true })
@@ -28,9 +25,7 @@ class NestController {
         fs.writeFile(filePath, fileContent, (err) => {
           err
             ? new Error(err)
-            : new Logger().log(
-                `File "${fileName}" created successfully`
-              );
+            : new Logger().log(`File "${fileName}" created successfully`);
         });
       } catch (error) {
         return new Error(error);
