@@ -6,13 +6,15 @@ const [fs, path, Logger, Type] = [
 ];
 class NestDtoCreate {
   create(name) {
-    const [fileContent, fileName, folderName] = [
+    const [fileContent, fileName] = [
       `export class create${name}Dto { }`,
       `create.${name}.dto.ts`,
-      new Type().path,
     ];
     try {
-      const folderPath = path.join(__dirname, `${folderName}/${name}/dto/`);
+      const folderPath = path.join(
+        __dirname,
+        `${new Type().path}/${name}/dto/`
+      );
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
