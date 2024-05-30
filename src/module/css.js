@@ -1,7 +1,8 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class Css {
   fileContent = `body, h1, p { margin: 0; padding: 0;}
@@ -15,7 +16,7 @@ class Css {
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Global().path,
       name.split(".")[0],
     ];
     try {
