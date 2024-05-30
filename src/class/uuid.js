@@ -1,29 +1,8 @@
+const Type = require("../../global/global");
+
 class UUID {
   randomAlphabet() {
-    const consonants = [
-      "b",
-      "c",
-      "d",
-      "f",
-      "g",
-      "h",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "p",
-      "q",
-      "r",
-      "s",
-      "t",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z",
-    ];
-    return consonants[Math.floor(Math.random() * consonants.length)];
+    return new Type().consonants[Math.floor(Math.random() * consonants.length)];
   }
 
   alphanumeric() {
