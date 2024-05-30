@@ -5,7 +5,6 @@ const [fs, path, Logger, global] = [
   require("../../global/global"),
 ];
 class Binary {
-  fileContent = new global().binary;
   create(name) {
     const [fileName, trimmed, folderName] = [
       `${name}`,
@@ -18,7 +17,7 @@ class Binary {
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log(new global().alreadyPresent);
-      fs.writeFile(filePath, this.fileContent, (err) => {
+      fs.writeFile(filePath, new global().binary, (err) => {
         err
           ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
