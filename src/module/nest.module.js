@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
-
 class NestModule {
   create(name) {
     const fileContent = ` import { Module } from '@nestjs/common';
