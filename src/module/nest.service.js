@@ -19,11 +19,9 @@ class NestService {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
 
       const filePath = path.join(folderPath, fileName);
-
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log("folder already present.");
-
       fs.writeFile(filePath, fileContent, (err) => {
         err
           ? new Logger().error(err)
