@@ -1,4 +1,4 @@
-const [fs, path, Logger, Global] = [
+const [fs, path, Logger, Type] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
@@ -10,14 +10,14 @@ class Map {
     const [fileName, fileContent, folderName] = [
       `${trimmed}.js`,
       `class ${trimmed} {} module.exports = ${trimmed};`,
-      new Global().path,
+      new Type().path,
     ];
     try {
       const folderPath = path.join(__dirname, `${folderName}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log(new Global().alreadyPresent);
+        : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, fileContent, (err) => {
         err
           ? new Error(err)
