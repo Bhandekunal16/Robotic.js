@@ -6,13 +6,9 @@ const [fs, path, Logger, type] = [
 ];
 class Binary {
   create(name) {
-    const [fileName, trimmed, folderName] = [
-      `${name}`,
-      name.split(".")[0],
-      new type().path,
-    ];
+    const [fileName, trimmed] = [`${name}`, name.split(".")[0]];
     try {
-      const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
+      const folderPath = path.join(__dirname, `${new type().path}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
