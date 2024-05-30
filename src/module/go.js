@@ -1,9 +1,8 @@
-const Global = require("../../global/global");
-
-const [fs, path, Logger] = [
+const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class Go {
   create(name) {
