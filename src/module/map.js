@@ -4,9 +4,11 @@ const Logger = require("../interface/Logger");
 class Map {
   create(name) {
     const trimmed = name.split(".")[0];
-    const fileName = `${trimmed}.js`;
-    const fileContent = `class ${trimmed} {} module.exports = ${trimmed};`;
-    const folderName = "../../../src";
+    const [fileName, fileContent, folderName] = [
+      `${trimmed}.js`,
+      `class ${trimmed} {} module.exports = ${trimmed};`,
+      "../../../src",
+    ];
     try {
       const folderPath = path.join(__dirname, `${folderName}`);
       const filePath = path.join(folderPath, fileName);
