@@ -25,5 +25,4 @@ class NestDtoCreate {
     }
   }
 }
-
 module.exports = NestDtoCreate;
