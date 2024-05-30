@@ -20,7 +20,6 @@ class Binary {
       fs.writeFile(filePath, this.fileContent, (err) => {
         if (err) {
           new Logger().error(err);
-          return undefined;
         } else {
           new Logger().log(`File "${fileName}" created successfully.`);
           return fileName;
