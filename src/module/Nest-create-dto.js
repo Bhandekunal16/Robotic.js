@@ -5,9 +5,11 @@ const logger = new Logger();
 
 class NestDtoCreate {
   create(name) {
-    const fileContent = `export class create${name}Dto { }`;
-    const fileName = `create.${name}.dto.ts`;
-    const folderName = "../../../src";
+    const [fileContent, fileName, folderName] = [
+      `export class create${name}Dto { }`,
+      `create.${name}.dto.ts`,
+      "../../../src",
+    ];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}/dto/`);
       const filePath = path.join(folderPath, fileName);
