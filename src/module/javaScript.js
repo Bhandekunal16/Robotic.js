@@ -7,9 +7,11 @@ const [fs, path, Logger] = [
 class JavaScript {
   fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
   create(name) {
-    const fileName = `${name}`;
-    const folderName = "../../../src";
-    const trimmed = name.split(".")[0];
+    const [fileName, folderName, trimmed] = [
+      `${name}`,
+      "../../../src",
+      name.split(".")[0],
+    ];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
