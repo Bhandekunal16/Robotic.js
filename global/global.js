@@ -33,6 +33,7 @@ class Global {
       public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) { return returnValue;}
       public static void main(String[] args) {
           ReturnType result = myFunction(value1, value2);}}`;
+    this.javascript = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
   }
 }
 
