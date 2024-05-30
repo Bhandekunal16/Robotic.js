@@ -27,7 +27,7 @@ class Css {
         : new Logger().log("Folder already present.");
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Logger().error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
