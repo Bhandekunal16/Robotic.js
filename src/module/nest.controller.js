@@ -21,20 +21,20 @@ class NestController {
         const filePath = path.join(folderPath, fileName);
         !fs.existsSync(folderPath)
           ? fs.mkdirSync(folderPath, { recursive: true })
-          : logger.log("folder already present.");
+          : new Logger().log("folder already present.");
         fs.writeFile(filePath, fileContent, (err) => {
           err
-            ? logger.error("Error creating file:" + err)
-            : logger.log(
+            ? new Logger().error("Error creating file:" + err)
+            : new Logger().log(
                 `File "${fileName}" created successfully. ---this is service`
               );
         });
       } catch (error) {
-        logger.error(error + "----> this is controller");
+        new Logger().error(error + "----> this is controller");
         return error;
       }
     } catch (error) {
-      logger.error(error + "----> this is controller");
+      new Logger().error(error + "----> this is controller");
       return error;
     }
   }
