@@ -3,7 +3,6 @@ const [fs, path, Logger] = [
   require("path"),
   require("../interface/Logger"),
 ];
-
 class JavaScript {
   fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
   create(name) {
