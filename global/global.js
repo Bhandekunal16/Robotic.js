@@ -1,4 +1,4 @@
-class Global {
+class Type {
   constructor() {
     /** @type string */ 
     this.binary = "1000001";
@@ -46,4 +46,4 @@ class Global {
   }
 }
 
-module.exports = Global;
+module.exports = Type;
