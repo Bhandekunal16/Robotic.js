@@ -1,10 +1,11 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class Binary {
-  fileContent = "1000001";
+  fileContent = new global().binary;
   create(name) {
     const [fileName, trimmed, folderName] = [
       `${name}`,
