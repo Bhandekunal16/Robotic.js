@@ -21,7 +21,7 @@ class NestRepository {
           : new Logger().log("folder already present.");
         fs.writeFile(filePath, fileContent, (err) => {
           err
-            ? new Logger().error("Error creating file:", err)
+            ? new Logger().error(err)
             : new Logger().log(`File "${fileName}" created successfully.`);
         });
       } catch (error) {
