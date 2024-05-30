@@ -11,8 +11,7 @@ class Web {
   }
   out() {
     const array = [HTML, Css, JavaScript];
-    const out = array.map((elements) => elements.name);
-    return out;
+    return array.map((elements) => elements.name);
   }
 }
 module.exports = Web;
