@@ -3,11 +3,6 @@ const NestService = require("./nest.service");
 const NestRepository = require("./nest.repository");
 const NestModule = require("./nest.module");
 const NestDtoCreate = require("./Nest-create-dto");
-const controller = new NestController();
-const service = new NestService();
-const repository = new NestRepository();
-const create = new NestDtoCreate();
-const Module = new NestModule();
 class Nest {
   async create(name) {
     const value = name.split(".")[0];
