@@ -1,34 +1,12 @@
 const TypeChecker = require("./TypeChecker");
+const Type = require("../../global/global");
 
 class DataGenerator {
   constructor() {
-    this.consonants = [
-      "b",
-      "c",
-      "d",
-      "f",
-      "g",
-      "h",
-      "j",
-      "k",
-      "l",
-      "m",
-      "n",
-      "p",
-      "q",
-      "r",
-      "s",
-      "t",
-      "v",
-      "w",
-      "x",
-      "y",
-      "z",
-    ];
-    this.ovals = ["a", "e", "i", "o", "u"];
-    this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
-    this.error =
-      "type error : check the type of the length of the array it is not a number.";
+    this.consonants = new Type().consonants;
+    this.ovals = new Type().ovals;
+    this.emails = new Type().emails;
+    this.error = new Type().error;
   }
 
   create(length, type) {

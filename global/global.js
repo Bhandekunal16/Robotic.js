@@ -54,6 +54,37 @@ class Type {
     /** @type string */
     this.typescript = `
   const main = () => {try{ } catch(error){ return {res: error, status: false, msg: 'error'} }}`;
+    /** @type Array<string> */
+    this.emails = ["@gmail.com", "@yahoo.com", "@hotmail.com", "@example.com"];
+    /** @type Array<string> */
+    this.ovals = ["a", "e", "i", "o", "u"];
+    /** @type string */
+    this.error =
+      "type error : check the type of the length of the array it is not a number.";
+    /** @type Array<string> */
+    this.consonants = [
+      "b",
+      "c",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
   }
 }
 
