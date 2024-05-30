@@ -10,8 +10,7 @@ class NestModule {
                           import { ${name}Service } from './${name}.service';
                           @Module({ controllers: [${name}Controller], providers: [${name}Service], }) 
                           export class ${name}Module {}`;
-    const fileName = `${name + ".module.ts"}`;
-    const folderName = "../../../src";
+    const [fileName, folderName] = [`${name + ".module.ts"}`, "../../../src"];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
       const filePath = path.join(folderPath, fileName);
