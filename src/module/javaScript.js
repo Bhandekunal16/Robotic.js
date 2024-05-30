@@ -29,5 +29,4 @@ class JavaScript {
     }
   }
 }
-
 module.exports = JavaScript;
