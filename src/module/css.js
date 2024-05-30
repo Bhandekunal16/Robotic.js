@@ -6,7 +6,7 @@ const [fs, path, Logger, Type] = [
 ];
 class Css {
   create(name) {
-    const [fileName, trimmed] = [`${name}`, name.split(".")[0]];
+    const [fileName, trimmed] = [name.toString(), name.split(".")[0]];
     try {
       const folderPath = path.join(__dirname, `${new Type().path}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
