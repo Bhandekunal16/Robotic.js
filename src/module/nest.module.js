@@ -14,13 +14,10 @@ class NestModule {
     const folderName = "../../../src";
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
-
       const filePath = path.join(folderPath, fileName);
-
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : logger.log("folder already present.");
-
       fs.writeFile(filePath, fileContent, (err) => {
         err
           ? logger.error("Error creating file:", err)
@@ -32,5 +29,4 @@ class NestModule {
     }
   }
 }
-
 module.exports = NestModule;
