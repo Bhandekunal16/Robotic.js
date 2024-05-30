@@ -13,7 +13,6 @@ class NestRepository {
                             export class ${name}Repository { private readonly data: string[] = [];
                             findAll(): string[] { return this.data; } }`;
       const fileName = `${name + ".repository.ts"}`;
-
       try {
         const folderPath = path.join(__dirname, `${new Type().path}/${name}`);
         const filePath = path.join(folderPath, fileName);
