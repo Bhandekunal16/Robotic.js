@@ -3,7 +3,6 @@ const [fs, path, Logger] = [
   require("path"),
   require("../interface/Logger"),
 ];
-
 class Go {
   fileContent = ` package main
                   import "fmt"
