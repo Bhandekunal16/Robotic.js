@@ -3,7 +3,6 @@ const [fs, path, Logger] = [
   require("path"),
   require("../interface/Logger"),
 ];
-
 class HTML {
   fileContent = `<!DOCTYPE html> <html lang="en">
   <head> <title>Your Page Title</title> <link rel="stylesheet" href="styles.css"> </head>
