@@ -19,7 +19,7 @@ class JSON {
         : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, new Type().package, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
