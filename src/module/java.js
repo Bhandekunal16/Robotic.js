@@ -1,7 +1,8 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class Java {
   fileContent = `public class MyClass {
@@ -11,7 +12,7 @@ class Java {
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Global().path,
       name.split(".")[0],
     ];
     try {
@@ -19,15 +20,14 @@ class Java {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("Folder already present.");
+        : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Error(error)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      new Error(error);
     }
   }
 }
