@@ -1,16 +1,14 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Type] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class JSON {
-  fileContent = `{ "name": "", "version": "1.0.0", "description": "", "main": "main.js",
-                    "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "", "build": "" },
-                    "author": "", "license": "ISC","dependencies": { } }`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Type().path,
       name.split(".")[0],
     ];
     try {
@@ -19,7 +17,7 @@ class JSON {
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log("folder already present.");
-      fs.writeFile(filePath, this.fileContent, (err) => {
+      fs.writeFile(filePath, new Type().package, (err) => {
         err
           ? new Logger().error("Error creating file:", err)
           : new Logger().log(`File "${fileName}" created successfully.`);
