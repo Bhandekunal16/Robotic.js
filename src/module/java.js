@@ -5,20 +5,9 @@ const [fs, path, Logger] = [
 ];
 class Java {
   fileContent = `public class MyClass {
-    // Function definition
-    public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) {
-        // Function body
-        // Perform operations using parameters
-        // ...
-        // Return a value of ReturnType
-        return returnValue;
-    }
-    // Main method for testing
+    public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) { return returnValue;}
     public static void main(String[] args) {
-        // Example usage of the function
-        ReturnType result = myFunction(value1, value2);
-        // Perform actions with the result if needed
-        // ...}}`;
+        ReturnType result = myFunction(value1, value2);}}`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
