@@ -19,12 +19,11 @@ class TypeScript {
         : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
-          ? new Logger().error(err)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      return new Error(error)
     }
   }
 }
