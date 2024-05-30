@@ -29,7 +29,7 @@ class NestRepository {
         return error;
       }
     } catch (error) {
-      new Logger().error(error, "----this is service");
+      new Logger().error(error);
       return error;
     }
   }
