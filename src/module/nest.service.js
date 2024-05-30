@@ -14,7 +14,6 @@ class NestService {
 
     const fileName = `${name + ".service.ts"}`;
     const folderName = "../../../src";
-
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
 
