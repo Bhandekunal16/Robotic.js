@@ -18,9 +18,9 @@ class Go {
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
-      if (!fs.existsSync(folderPath))
-        fs.mkdirSync(folderPath, { recursive: true });
-      else new Logger().log("Folder already present.");
+      !fs.existsSync(folderPath)
+        ? fs.mkdirSync(folderPath, { recursive: true })
+        : new Logger().log("Folder already present.");
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
           ? new Logger().error("Error creating file:", err)
