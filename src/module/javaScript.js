@@ -2,7 +2,7 @@ const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
-  require("../../global/global")
+  require("../../global/global"),
 ];
 class JavaScript {
   fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
@@ -17,7 +17,7 @@ class JavaScript {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("folder already present.");
+        : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
           ? new Logger().error("Error creating file:", err)
