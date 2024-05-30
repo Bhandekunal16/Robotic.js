@@ -43,6 +43,10 @@ class Type {
           ReturnType result = myFunction(value1, value2);}}`;
     /** @type string */ 
     this.javascript = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
+    /** @type string */
+    this.package = `{ "name": "", "version": "1.0.0", "description": "", "main": "main.js",
+    "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "", "build": "" },
+    "author": "", "license": "ISC","dependencies": { } }`;
   }
 }
 
