@@ -32,5 +32,4 @@ class NestRepository {
     }
   }
 }
-
 module.exports = NestRepository;
