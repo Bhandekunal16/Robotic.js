@@ -19,12 +19,11 @@ class Css {
         : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, new Global().css, (err) => {
         err
-          ? new Logger().error(err)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      return new Error(error);
     }
   }
 }
