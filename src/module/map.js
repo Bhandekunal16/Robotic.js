@@ -7,13 +7,12 @@ const [fs, path, Logger, Type] = [
 class Map {
   create(name) {
     const trimmed = name.split(".")[0];
-    const [fileName, fileContent, folderName] = [
+    const [fileName, fileContent] = [
       `${trimmed}.js`,
       `class ${trimmed} {} module.exports = ${trimmed};`,
-      new Type().path,
     ];
     try {
-      const folderPath = path.join(__dirname, `${folderName}`);
+      const folderPath = path.join(__dirname, `${new Type().path}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
