@@ -3,10 +3,8 @@ const path = require("path");
 const Logger = require("../interface/Logger");
 const logger = new Logger();
 
-/**Class representing Java file operations.*/
 class Java {
   fileContent = `public class MyClass {
-
     // Function definition
     public static ReturnType myFunction(ParameterType1 parameter1, ParameterType2 parameter2) {
         // Function body
@@ -16,7 +14,6 @@ class Java {
         // Return a value of ReturnType
         return returnValue;
     }
-
     // Main method for testing
     public static void main(String[] args) {
         // Example usage of the function
