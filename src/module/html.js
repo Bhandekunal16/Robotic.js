@@ -16,10 +16,10 @@ class HTML {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("Folder already present.");
+        : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, new Global().html, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Logger().error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
