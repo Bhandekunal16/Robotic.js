@@ -20,9 +20,11 @@ class Java {
         // Perform actions with the result if needed
         // ...}}`;
   create(name) {
-    const fileName = `${name}`;
-    const folderName = "../../../src";
-    const trimmed = name.split(".")[0];
+    const [fileName, folderName, trimmed] = [
+      `${name}`,
+      "../../../src",
+      name.split(".")[0],
+    ];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
