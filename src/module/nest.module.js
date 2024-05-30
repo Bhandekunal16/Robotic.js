@@ -1,7 +1,8 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Type] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class NestModule {
   create(name) {
@@ -10,16 +11,16 @@ class NestModule {
                           import { ${name}Service } from './${name}.service';
                           @Module({ controllers: [${name}Controller], providers: [${name}Service], }) 
                           export class ${name}Module {}`;
-    const [fileName, folderName] = [`${name + ".module.ts"}`, "../../../src"];
+    const [fileName, folderName] = [`${name + ".module.ts"}`, new Type().path];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("folder already present.");
+        : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, fileContent, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Logger().error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
