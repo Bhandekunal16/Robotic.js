@@ -28,6 +28,7 @@ class Global {
                 <section id="about"> <h2>About Us</h2> <p>Learn more about our company and values.</p> </section>
                 <section id="services"> <h2>Our Services</h2> <p>Discover the services we offer to our clients.</p> </section> </main>
         <footer> <p>&copy; 2024 Your Website. All rights reserved.</p> </footer> </body></html>`;
+    this.start = 'Enter something (type "exit" to stop): ';
   }
 }
 
