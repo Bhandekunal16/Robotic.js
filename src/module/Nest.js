@@ -12,11 +12,11 @@ class Nest {
   async create(name) {
     const value = name.split(".")[0];
     Promise.all[
-      (controller.create(value),
-      service.create(value),
-      repository.create(value),
-      Module.create(value),
-      create.create(value))
+      (new NestController().create(value),
+      new NestService().create(value),
+      new NestRepository().create(value),
+      new NestModule().create(value),
+      new NestDtoCreate().create(value))
     ];
   }
   out() {
