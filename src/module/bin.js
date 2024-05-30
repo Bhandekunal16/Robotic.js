@@ -27,5 +27,4 @@ class Binary {
     }
   }
 }
-
 module.exports = Binary;
