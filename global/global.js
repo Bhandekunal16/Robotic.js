@@ -11,6 +11,10 @@ class Global {
     nav a { color: #ecf0f1; text-decoration: none; margin-right: 1em; }
     main { padding: 1em; }
     footer { background-color: #2c3e50; color: #ecf0f1; padding: 1em; text-align: center;}`;
+    this.go = ` package main
+                  import "fmt"
+      func functionName(parameter1 type1, parameter2 type2) returnType { return returnValue }
+      func main() { result := functionName(value1, value2)}`;
   }
 }
 

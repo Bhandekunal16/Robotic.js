@@ -1,17 +1,15 @@
+const Global = require("../../global/global");
+
 const [fs, path, Logger] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
 ];
 class Go {
-  fileContent = ` package main
-                  import "fmt"
-      func functionName(parameter1 type1, parameter2 type2) returnType { return returnValue }
-      func main() { result := functionName(value1, value2)}`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Global().path,
       name.split(".")[0],
     ];
     try {
@@ -19,10 +17,10 @@ class Go {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("Folder already present.");
-      fs.writeFile(filePath, this.fileContent, (err) => {
+        : new Logger().log(new Global().alreadyPresent);
+      fs.writeFile(filePath, new Global().go, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Logger().error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
