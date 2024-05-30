@@ -11,9 +11,9 @@ class NestModule {
                           import { ${name}Service } from './${name}.service';
                           @Module({ controllers: [${name}Controller], providers: [${name}Service], }) 
                           export class ${name}Module {}`;
-    const [fileName, folderName] = [`${name + ".module.ts"}`, new Type().path];
+    const fileName = `${name + ".module.ts"}`;
     try {
-      const folderPath = path.join(__dirname, `${folderName}/${name}`);
+      const folderPath = path.join(__dirname, `${new Type().path}/${name}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
@@ -24,7 +24,7 @@ class NestModule {
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      return new Error(error)
+      return new Error(error);
     }
   }
 }
