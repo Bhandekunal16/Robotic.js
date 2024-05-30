@@ -23,8 +23,7 @@ class Go {
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      return new Error(error);
     }
   }
 }
