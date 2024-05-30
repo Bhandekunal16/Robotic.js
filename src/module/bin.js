@@ -18,9 +18,8 @@ class Binary {
         ? fs.mkdirSync(folderPath, { recursive: true })
         : new Logger().log("Folder already present.");
       fs.writeFile(filePath, this.fileContent, (err) => {
-        if (err) {
-          new Logger().error(err);
-        } else {
+        if (err) new Logger().error(err);
+        else {
           new Logger().log(`File "${fileName}" created successfully.`);
           return fileName;
         }
