@@ -1,4 +1,4 @@
-const [fs, path, Logger, Global] = [
+const [fs, path, Logger, Type] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
@@ -8,7 +8,7 @@ class HTML {
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      new Global().path,
+      new Type().path,
       name.split(".")[0],
     ];
     try {
@@ -16,8 +16,8 @@ class HTML {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log(new Global().alreadyPresent);
-      fs.writeFile(filePath, new Global().html, (err) => {
+        : new Logger().log(new Type().alreadyPresent);
+      fs.writeFile(filePath, new Type().html, (err) => {
         err
           ? new Error(error)
           : new Logger().log(`File "${fileName}" created successfully.`);
