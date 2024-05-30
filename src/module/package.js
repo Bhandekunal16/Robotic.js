@@ -1,6 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const Logger = require("../interface/Logger");
+const [fs, path, Logger] = [
+  require("fs"),
+  require("path"),
+  require("../interface/Logger"),
+];
 class JSON {
   fileContent = `{ "name": "", "version": "1.0.0", "description": "", "main": "main.js",
                     "scripts": { "test": "echo \"Error: no test specified\" && exit 1", "start": "", "build": "" },
