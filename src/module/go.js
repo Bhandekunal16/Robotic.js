@@ -19,7 +19,7 @@ class Go {
         : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, new Global().go, (err) => {
         err
-          ? new Error(error)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
