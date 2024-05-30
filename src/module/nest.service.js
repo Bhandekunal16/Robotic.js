@@ -9,7 +9,6 @@ class NestService {
                           export class ${name}Service {
                           private readonly data: string[] = [];
                           findAll(): string[] { return this.data; } }`;
-
     const fileName = `${name + ".service.ts"}`;
     const folderName = "../../../src";
     try {
