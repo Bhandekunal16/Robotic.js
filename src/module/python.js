@@ -8,7 +8,7 @@ class Python {
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Type.path,
       name.split(".")[0],
     ];
     try {
