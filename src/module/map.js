@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
-
 class Map {
   create(name) {
     const trimmed = name.split(".")[0];
