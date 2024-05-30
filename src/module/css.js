@@ -16,7 +16,7 @@ class Css {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Error(new Global().alreadyPresent);
+        : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, new Global().css, (err) => {
         err
           ? new Error(err)
