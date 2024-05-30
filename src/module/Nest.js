@@ -22,8 +22,7 @@ class Nest {
       NestDtoCreate,
       NestModule,
     ];
-    const imports = route.map((elements) => elements.name);
-    return imports;
+    return route.map((elements) => elements.name);
   }
 }
 module.exports = Nest;
