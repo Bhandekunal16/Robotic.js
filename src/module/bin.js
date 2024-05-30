@@ -19,7 +19,7 @@ class Binary {
         : new Logger().log("Folder already present.");
       fs.writeFile(filePath, this.fileContent, (err) => {
         if (err) {
-          new Logger().error("Error creating file:", err);
+          new Logger().error(err);
           return undefined;
         } else {
           new Logger().log(`File "${fileName}" created successfully.`);
@@ -27,8 +27,7 @@ class Binary {
         }
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      return new Error(error);
     }
   }
 }
