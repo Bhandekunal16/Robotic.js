@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const Logger = require("../interface/Logger");
-const logger = new Logger();
 
 class JavaScript {
   fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
