@@ -1,6 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const Logger = require("../interface/Logger");
+const [fs, path, Logger] = [
+  require("fs"),
+  require("path"),
+  require("../interface/Logger"),
+];
 class NestController {
   create(name) {
     try {
