@@ -7,10 +7,7 @@ class Map {
   create(name) {
     const trimmed = name.split(".")[0];
     const fileName = `${trimmed}.js`;
-    const fileContent = `
-    class ${trimmed} {}
-    module.exports = ${trimmed};
-  `;
+    const fileContent = `class ${trimmed} {} module.exports = ${trimmed};`;
     const folderName = "../../../src";
     try {
       const folderPath = path.join(__dirname, `${folderName}`);
