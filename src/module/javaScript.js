@@ -1,14 +1,15 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global")
 ];
 class JavaScript {
   fileContent = `function main(){ try{ }catch(error){ return {res: error , status: false, msg: 'error'}}}`;
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Global().path,
       name.split(".")[0],
     ];
     try {
