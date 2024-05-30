@@ -9,8 +9,7 @@ class NestService {
                           export class ${name}Service {
                           private readonly data: string[] = [];
                           findAll(): string[] { return this.data; } }`;
-    const fileName = `${name + ".service.ts"}`;
-    const folderName = "../../../src";
+    const [fileName, folderName] = [`${name + ".service.ts"}`, "../../../src"];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
 
