@@ -27,18 +27,16 @@ class NestController {
           : new Logger().log(new Type().alreadyPresent);
         fs.writeFile(filePath, fileContent, (err) => {
           err
-            ? new Logger().error("Error creating file:" + err)
+            ? new Error(err)
             : new Logger().log(
-                `File "${fileName}" created successfully. ---this is service`
+                `File "${fileName}" created successfully`
               );
         });
       } catch (error) {
-        new Logger().error(error + "----> this is controller");
-        return error;
+        return new Error(error);
       }
     } catch (error) {
-      new Logger().error(error + "----> this is controller");
-      return error;
+      return new Error(error);
     }
   }
 }
