@@ -10,7 +10,7 @@ class Binary {
     const [fileName, trimmed, folderName] = [
       `${name}`,
       name.split(".")[0],
-      "../../../src",
+      new global().path,
     ];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
