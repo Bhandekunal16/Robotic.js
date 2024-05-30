@@ -10,7 +10,6 @@ class Java {
         // Function body
         // Perform operations using parameters
         // ...
-
         // Return a value of ReturnType
         return returnValue;
     }
