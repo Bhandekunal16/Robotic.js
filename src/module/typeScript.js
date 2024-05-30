@@ -6,13 +6,9 @@ const [fs, path, Logger, Type] = [
 ];
 class TypeScript {
   create(name) {
-    const [fileName, folderName, trimmed] = [
-      `${name}`,
-      new Type().path,
-      name.split(".")[0],
-    ];
+    const [fileName, trimmed] = [name.toString(), name.split(".")[0]];
     try {
-      const folderPath = path.join(__dirname, `${folderName}/${trimmed}`);
+      const folderPath = path.join(__dirname, `${new Type().path}/${trimmed}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
@@ -23,7 +19,7 @@ class TypeScript {
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      return new Error(error)
+      return new Error(error);
     }
   }
 }
