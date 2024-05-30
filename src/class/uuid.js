@@ -2,7 +2,9 @@ const Type = require("../../global/global");
 
 class UUID {
   randomAlphabet() {
-    return new Type().consonants[Math.floor(Math.random() * consonants.length)];
+    return new Type().consonants[
+      Math.floor(Math.random() * new Type().consonants.length)
+    ];
   }
 
   alphanumeric() {
@@ -38,3 +40,5 @@ class UUID {
 }
 
 module.exports = UUID;
+
+console.log(new UUID().randomAlphabet());
