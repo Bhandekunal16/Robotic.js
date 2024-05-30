@@ -1,13 +1,14 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Type] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class TypeScript {
   create(name) {
     const [fileName, folderName, trimmed] = [
       `${name}`,
-      "../../../src",
+      new Type().path,
       name.split(".")[0],
     ];
     try {
@@ -15,7 +16,7 @@ class TypeScript {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("folder already present.");
+        : new Logger().log(new Type().alreadyPresent);
       fs.writeFile(filePath, this.fileContent, (err) => {
         err
           ? new Logger().error(err)
