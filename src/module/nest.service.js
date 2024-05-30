@@ -29,5 +29,4 @@ class NestService {
     }
   }
 }
-
 module.exports = NestService;
