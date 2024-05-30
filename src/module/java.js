@@ -19,9 +19,7 @@ class Java {
         // Example usage of the function
         ReturnType result = myFunction(value1, value2);
         // Perform actions with the result if needed
-        // ...
-    }
-}`;
+        // ...}}`;
   create(name) {
     const fileName = `${name}`;
     const folderName = "../../../src";
