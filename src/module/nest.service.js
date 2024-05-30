@@ -12,7 +12,6 @@ class NestService {
     const [fileName, folderName] = [`${name + ".service.ts"}`, "../../../src"];
     try {
       const folderPath = path.join(__dirname, `${folderName}/${name}`);
-
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
