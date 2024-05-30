@@ -15,24 +15,21 @@ class NestRepository {
       const folderName = "../../../src";
       try {
         const folderPath = path.join(__dirname, `${folderName}/${name}`);
-
         const filePath = path.join(folderPath, fileName);
-
         !fs.existsSync(folderPath)
           ? fs.mkdirSync(folderPath, { recursive: true })
-          : logger.log("folder already present.");
-
+          : new Logger().log("folder already present.");
         fs.writeFile(filePath, fileContent, (err) => {
           err
-            ? logger.error("Error creating file:", err)
-            : logger.log(`File "${fileName}" created successfully.`);
+            ? new Logger().error("Error creating file:", err)
+            : new Logger().log(`File "${fileName}" created successfully.`);
         });
       } catch (error) {
-        logger.error(error);
+        new Logger().error(error);
         return error;
       }
     } catch (error) {
-      logger.error(error, "----this is service");
+      new Logger().error(error, "----this is service");
       return error;
     }
   }
