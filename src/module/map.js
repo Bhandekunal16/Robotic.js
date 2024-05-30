@@ -12,7 +12,6 @@ class Map {
     module.exports = ${trimmed};
   `;
     const folderName = "../../../src";
-
     try {
       const folderPath = path.join(__dirname, `${folderName}`);
       const filePath = path.join(folderPath, fileName);
