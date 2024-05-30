@@ -1,8 +1,11 @@
-const NestController = require("./nest.controller");
-const NestService = require("./nest.service");
-const NestRepository = require("./nest.repository");
-const NestModule = require("./nest.module");
-const NestDtoCreate = require("./Nest-create-dto");
+const [NestController, NestService, NestRepository, NestModule, NestDtoCreate] =
+  [
+    require("./nest.controller"),
+    require("./nest.service"),
+    require("./nest.repository"),
+    require("./nest.module"),
+    require("./Nest-create-dto"),
+  ];
 class Nest {
   async create(name) {
     const value = name.split(".")[0];
