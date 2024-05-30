@@ -17,14 +17,14 @@ class NestModule {
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : logger.log("folder already present.");
+        : new Logger().log("folder already present.");
       fs.writeFile(filePath, fileContent, (err) => {
         err
-          ? logger.error("Error creating file:", err)
-          : logger.log(`File "${fileName}" created successfully.`);
+          ? new Logger().error("Error creating file:", err)
+          : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      logger.error(error);
+      new Logger().error(error);
       return error;
     }
   }
