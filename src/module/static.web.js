@@ -1,6 +1,8 @@
-const HTML = require("./html");
-const Css = require("./css");
-const JavaScript = require("./javaScript");
+const [HTML, Css, JavaScript] = [
+  require("./html"),
+  require("./css"),
+  require("./javaScript"),
+];
 class Web {
   create(name) {
     new HTML().create(name.split(".")[0] + ".js");
