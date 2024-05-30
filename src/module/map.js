@@ -1,7 +1,8 @@
-const [fs, path, Logger] = [
+const [fs, path, Logger, Global] = [
   require("fs"),
   require("path"),
   require("../interface/Logger"),
+  require("../../global/global"),
 ];
 class Map {
   create(name) {
@@ -9,22 +10,21 @@ class Map {
     const [fileName, fileContent, folderName] = [
       `${trimmed}.js`,
       `class ${trimmed} {} module.exports = ${trimmed};`,
-      "../../../src",
+      new Global().path,
     ];
     try {
       const folderPath = path.join(__dirname, `${folderName}`);
       const filePath = path.join(folderPath, fileName);
       !fs.existsSync(folderPath)
         ? fs.mkdirSync(folderPath, { recursive: true })
-        : new Logger().log("folder already present.");
+        : new Logger().log(new Global().alreadyPresent);
       fs.writeFile(filePath, fileContent, (err) => {
         err
-          ? new Logger().error("Error creating file:", err)
+          ? new Error(err)
           : new Logger().log(`File "${fileName}" created successfully.`);
       });
     } catch (error) {
-      new Logger().error(error);
-      return error;
+      return new Error(error);
     }
   }
 }
