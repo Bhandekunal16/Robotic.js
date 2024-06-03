@@ -1,12 +1,13 @@
-const [express, bodyParser, Color, Logger, Node, Response] = [
+const [express, bodyParser, Color, Logger, Node, Response, Config] = [
   require("express"),
   require("body-parser"),
   require("./src/interface/color"),
   require("./src/interface/Logger"),
   require("./src/module/index"),
   require("./src/class/response"),
+  require("./config"),
 ];
-require("dotenv").config();
+new Config().loadEnv(".env");
 
 const app = express();
 app.use(bodyParser.json());
