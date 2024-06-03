@@ -3,9 +3,10 @@ index.js
 /src/data/file.js
 
 
-#  echo "main.js" >> .gitignore 
-#  git rm --cached main.js       
+#  echo "core.js" >> .gitignore 
+#  git rm --cached core.js       
 #  git add .gitignore             
-#  git commit -m "Add main.js to .gitignore"  
+#  git commit -m "Add core.js to .gitignore"  
 #  git status                    
 main.js
+core.js
