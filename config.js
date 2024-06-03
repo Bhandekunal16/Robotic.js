@@ -1,5 +1,4 @@
-const fs = require("fs");
-const path = require("path");
+const [fs, path] = [require("fs"), require("path")];
 
 class Config {
   loadEnv(filePath) {
