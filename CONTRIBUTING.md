@@ -17,7 +17,6 @@ This section guides you through submitting a bug report for Robotic.js. Followin
 - **Check the [issues](https://github.com/Robotic.js/issues)** to see if the bug has already been reported.
 - **Perform a [cursory search](https://github.com/Robotic.js/issues?utf8=✓&q=is%3Aissue)** to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
 
-
 - **Use a clear and descriptive title** for the issue to identify the problem.
 - **Describe the exact steps which reproduce the problem** in as many details as possible.
-- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub 
+- **Provide specific examples to demonstrate the steps**. Include links to files or GitHub
