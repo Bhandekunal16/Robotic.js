@@ -18,6 +18,4 @@ class Config {
   }
 }
 
-new Config().loadEnv(".env");
-
 module.exports = Config;
