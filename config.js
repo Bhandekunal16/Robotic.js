@@ -1,5 +1,4 @@
 const [fs, path] = [require("fs"), require("path")];
-
 class Config {
   loadEnv(filePath) {
     const envPath = path.resolve(process.cwd(), filePath);
