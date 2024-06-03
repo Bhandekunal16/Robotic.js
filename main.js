@@ -19,11 +19,11 @@ app.get("/", async (req, res) => {
 const routes = [Node, Color, Logger, Response];
 let imports = routes.map((elements) => elements.name);
 app.listen(process.env.LOCALHOST, () => {
-  new Logger().log("*".repeat(140));
+  new Logger().log("*".repeat(138));
   new Logger().new(imports);
   new Logger().log(
     `Node app is successfully created on http://localhost: ${process.env.LOCALHOST}.`
   );
-  new Logger().log("*".repeat(140));
+  new Logger().log("*".repeat(138));
   new Node().getUserInput();
 });
