@@ -5,13 +5,9 @@ class Config {
     const envContent = fs.readFileSync(envPath, "utf-8");
     envContent.split("\n").forEach((line) => {
       line = line.trim();
-      if (line.length === 0 || line.startsWith("#")) {
-        return;
-      }
+      if (line.length === 0 || line.startsWith("#")) return;
       const [key, value] = line.split(":");
-      if (key && value !== undefined) {
-        process.env[key.trim()] = value.trim();
-      }
+      if (key && value !== undefined) process.env[key.trim()] = value.trim();
     });
   }
 }
