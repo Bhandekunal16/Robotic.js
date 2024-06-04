@@ -19,13 +19,13 @@ class Logger {
 
   log(message) {
     console.log(
-      `${new Color().green}  [NODE] : ${new Color().white} ${message}`
+      `${new Color().green}[NODE] : ${new Color().white} ${message}`
     );
   }
 
   warn(message, optionalContain) {
     console.log(
-      `${new Color().yellow}  [NODE] : WARN ${new Color().white} ${message} ${
+      `${new Color().yellow}[NODE] : WARN ${new Color().white} ${message} ${
         optionalContain ?? ""
       }`
     );
