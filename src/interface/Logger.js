@@ -33,7 +33,7 @@ class Logger {
 
   error(message, optionalContain) {
     console.log(
-      `${new Color().red}  [NODE] : ERROR ${message} ${optionalContain ?? ""}`
+      `${new Color().red}[NODE] : ERROR ${message} ${optionalContain ?? ""}`
     );
   }
 
