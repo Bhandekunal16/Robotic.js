@@ -14,7 +14,8 @@
   "author": "Kunal Bhande",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "robotic-env-reader": "^1.0.0"
   },
   "repository": {
     "type": "git",
