@@ -5,7 +5,7 @@ const [express, bodyParser, Color, Logger, Node, Response, Config] = [
   require("./src/interface/Logger"),
   require("./src/module/index"),
   require("./src/class/response"),
-  require("./config"),
+  require("robotic-env-reader/index"),
 ];
 new Config().loadEnv(".env");
 
