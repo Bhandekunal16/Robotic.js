@@ -24,8 +24,7 @@ class File {
   }
 
   contain() {
-    const fileContents = ms.readFile(this.file, "utf8");
-    return fileContents;
+    return ms.readFile(this.file, "utf8");
   }
 }
 
