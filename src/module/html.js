@@ -7,5 +7,4 @@ class HTML {
     return new create().create(name, new type().html);
   }
 }
-
 module.exports = HTML;
