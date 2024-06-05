@@ -7,5 +7,4 @@ class Java {
     return new create().create(name, new type().java);
   }
 }
-
 module.exports = Java;
