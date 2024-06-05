@@ -1,9 +1,4 @@
-const [fs, path, Logger, Type] = [
-  require("fs"),
-  require("path"),
-  require("../interface/Logger"),
-  require("../../global/global"),
-];
+const create = require("../data/create");
 class NestRepository {
   create(name) {
     const fileContent = ` import { Injectable } from '@nestjs/common';
