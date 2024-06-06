@@ -11,6 +11,9 @@
   "keywords": [
     "framework"
   ],
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+},
   "author": "Kunal Bhande",
   "license": "ISC",
   "dependencies": {
