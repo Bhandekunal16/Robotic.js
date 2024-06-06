@@ -12,7 +12,7 @@
     "framework"
   ],
   "publishConfig": {
-  "registry": "https://npm.pkg.github.com"
+  "registry": "git+https://github.com/Bhandekunal16/Robotic.js.git"
 },
   "author": "Kunal Bhande",
   "license": "ISC",
