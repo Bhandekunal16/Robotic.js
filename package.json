@@ -1,6 +1,6 @@
 {
   "name": "robotic.js",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "description": "nothing",
   "main": "main.js",
   "scripts": {
@@ -11,9 +11,6 @@
   "keywords": [
     "framework"
   ],
-  "publishConfig": {
-  "registry": "git+https://github.com/Bhandekunal16/Robotic.js.git"
-},
   "author": "Kunal Bhande",
   "license": "ISC",
   "dependencies": {
