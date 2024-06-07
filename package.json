@@ -11,6 +11,9 @@
   "keywords": [
     "framework"
   ],
+  "publishConfig": {
+  "registry": "git+https://github.com/Bhandekunal16/Robotic.js.git"
+},
   "author": "Kunal Bhande",
   "license": "ISC",
   "dependencies": {
