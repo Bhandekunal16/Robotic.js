@@ -10,6 +10,10 @@ class TypeChecker {
   checkBoolean(value) {
     return typeof value == typeof Boolean(true) ? true : false;
   }
+
+  identifier(input) {
+    return typeof input;
+  }
 }
 
 module.exports = TypeChecker;
