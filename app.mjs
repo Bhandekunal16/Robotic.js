@@ -8,7 +8,6 @@ import HexColorGenerator from "./src/class/random-hexColor-generator.js";
 import Response from "./src/class/response.js";
 import TypeChecker from "./src/class/TypeChecker.js";
 import UUID from "./src/class/uuid.js";
-import Create from "./src/data/create.js";
 import mathematic from "./src/data/mathematic.js";
 
 export const custom = new Logger();
@@ -21,6 +20,5 @@ export const hexColorGenerator = new HexColorGenerator();
 export const response = new Response();
 export const typeChecker = new TypeChecker();
 export const uuid = new UUID();
-export const create = new Create();
 export const math = new mathematic();
 
