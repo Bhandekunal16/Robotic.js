@@ -7,6 +7,7 @@ const OTP = require("./src/class/OtpGenerator");
 import uuid from "./types/class/uuid";
 import otp from "./types/class/OtpGenerator";
 import Logger from "./types/interface/Logger";
+import Response from "./types/class/response";
 
 export const LOGGER: Logger = new logger();
 export const Res: Response = new response();
