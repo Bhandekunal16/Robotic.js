@@ -1,10 +1,10 @@
 /node_modules
 /src/data/file.js             
-core.js
+code.js
 
 
 #  echo "core.js" >> .gitignore 
 #  git rm --cached core.js       
 #  git add .gitignore             
 #  git commit -m "Add core.js to .gitignore"  
-#  git status
+#  git statuscode.js
