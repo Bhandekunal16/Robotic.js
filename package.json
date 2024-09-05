@@ -1,6 +1,6 @@
 {
   "name": "robotic.js",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "nothing",
   "main": "main.js",
   "scripts": {
@@ -13,10 +13,6 @@
   ],
   "author": "Kunal Bhande",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.19.2",
-    "robotic-env-reader": "^1.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Bhandekunal16/Robotic.js.git"
