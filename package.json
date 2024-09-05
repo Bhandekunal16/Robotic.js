@@ -15,8 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
-    "robotic-env-reader": "^1.0.0",
-    "unzipper": "^0.12.3"
+    "robotic-env-reader": "^1.0.0"
   },
   "repository": {
     "type": "git",
