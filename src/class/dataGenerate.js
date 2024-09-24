@@ -67,7 +67,7 @@ class DataGenerator {
         for (let j = 1; j < 4; j++) {
           element +=
             this.#type.consonants[Math.floor(Math.random() * 20)] +
-            this.#type.ovals[Math.floor(Math.random() * 5)];
+            this.#type.ovals[Math.floor(Math.random() * this.#captcha_len)];
         }
         array.push(element);
       }
