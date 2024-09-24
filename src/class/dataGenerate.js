@@ -38,11 +38,11 @@ class DataGenerator {
 
   #generateMobileNumber(length) {
     try {
-      const [array, number] = [[], 10];
+      const array = [];
       for (let index = 0; index < length; index++) {
         let element = "";
         for (let j = 0; j < number; j++) {
-          element += Math.floor(Math.random() * number);
+          element += Math.floor(Math.random() * 10);
         }
         array.push(element);
       }
@@ -56,13 +56,13 @@ class DataGenerator {
 
   #generateRandomName(length) {
     try {
-      const [array, num1, num2, num3] = [[], 20, 5, 4];
+      const array = [];
       for (let index = 0; index < length; index++) {
         let element = "";
-        for (let j = 1; j < num3; j++) {
+        for (let j = 1; j < 4; j++) {
           element +=
-            this.#type.consonants[Math.floor(Math.random() * num1)] +
-            this.#type.ovals[Math.floor(Math.random() * num2)];
+            this.#type.consonants[Math.floor(Math.random() * 20)] +
+            this.#type.ovals[Math.floor(Math.random() * 5)];
         }
         array.push(element);
       }
@@ -75,15 +75,12 @@ class DataGenerator {
   #generateRandomEmail(length) {
     try {
       let array = [];
-      const [num1, num2] = [20, 4];
       for (let index = 0; index < length; index++) {
         let element = "";
         for (let j = 1; j < 7; j++) {
-          element += this.#type.consonants[Math.floor(Math.random() * num1)];
+          element += this.#type.consonants[Math.floor(Math.random() * 4)];
         }
-        array.push(
-          element + this.#type.emails[Math.floor(Math.random() * num2)]
-        );
+        array.push(element + this.#type.emails[Math.floor(Math.random() * 20)]);
       }
       return array.length > 0 ? array : this.error;
     } catch (error) {
@@ -93,13 +90,11 @@ class DataGenerator {
 
   captcha() {
     this.value = "";
-    const [num1, num2] = [10, 5];
-    for (let j = 1; j < num2; j++) {
+    for (let j = 1; j < 5; j++) {
       this.value +=
         this.#type.consonants[
-          Math.floor(Math.random() * num1)
-        ].toLocaleUpperCase() +
-        this.#type.ovals[Math.floor(Math.random() * num2)];
+          Math.floor(Math.random() * 10)
+        ].toLocaleUpperCase() + this.#type.ovals[Math.floor(Math.random() * 5)];
     }
     return this.value;
   }
