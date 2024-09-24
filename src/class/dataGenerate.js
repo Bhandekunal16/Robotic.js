@@ -39,7 +39,7 @@ class DataGenerator {
           throw new Error(`Unsupported type: ${type}`);
       }
     } catch (error) {
-      return new Error(error);
+      return error;
     }
   }
 
@@ -55,7 +55,7 @@ class DataGenerator {
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      throw new Error(error);
+      throw error;
     }
   }
 
@@ -71,9 +71,9 @@ class DataGenerator {
         }
         array.push(element);
       }
-      return array.length > 0 ? array : new Error(this.error);
+      return array.length > 0 ? array : this.error;
     } catch (error) {
-      throw new Error(error);
+      throw error;
     }
   }
 
@@ -87,9 +87,9 @@ class DataGenerator {
         }
         array.push(element + this.#type.emails[Math.floor(Math.random() * 4)]);
       }
-      return array.length > 0 ? array : new Error(this.error);
+      return array.length > 0 ? array : this.error;
     } catch (error) {
-      throw new Error(error);
+      throw error;
     }
   }
 
