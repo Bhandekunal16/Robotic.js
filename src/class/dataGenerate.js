@@ -43,12 +43,11 @@ class DataGenerator {
     try {
       const array = [];
       for (let index = 0; index < length; index++) {
-        let [name, element] = [[], ""];
+        let element = "";
         for (let j = 0; j < 10; j++) {
           element += Math.floor(Math.random() * 10);
         }
-        name.push(element);
-        array.push(...name);
+        array.push(element);
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
