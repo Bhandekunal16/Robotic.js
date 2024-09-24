@@ -7,10 +7,14 @@ class DataGenerator {
   #type;
   #checker;
   value;
+  #number;
+  #captcha_len;
 
   constructor() {
     this.#type = new Type();
     this.#checker = new TypeChecker();
+    this.#number = 10;
+    this.#captcha_len = 5;
   }
 
   create(length, type) {
@@ -44,14 +48,14 @@ class DataGenerator {
       const array = [];
       for (let index = 0; index < length; index++) {
         let element = "";
-        for (let j = 0; j < 10; j++) {
-          element += Math.floor(Math.random() * 10);
+        for (let j = 0; j < this.#number; j++) {
+          element += Math.floor(Math.random() * this.#number);
         }
         array.push(element);
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      return new Error(error);
+      throw new Error(error);
     }
   }
 
@@ -69,7 +73,7 @@ class DataGenerator {
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      return new Error(error);
+      throw new Error(error);
     }
   }
 
@@ -85,17 +89,18 @@ class DataGenerator {
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
-      return new Error(error);
+      throw new Error(error);
     }
   }
 
   captcha() {
     this.value = "";
-    for (let j = 1; j < 5; j++) {
+    for (let j = 1; j < this.#captcha_len; j++) {
       this.value +=
         this.#type.consonants[
-          Math.floor(Math.random() * 10)
-        ].toLocaleUpperCase() + this.#type.ovals[Math.floor(Math.random() * 5)];
+          Math.floor(Math.random() * this.#number)
+        ].toLocaleUpperCase() +
+        this.#type.ovals[Math.floor(Math.random() * this.#captcha_len)];
     }
     return this.value;
   }
