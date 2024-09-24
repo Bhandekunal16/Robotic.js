@@ -9,12 +9,14 @@ class DataGenerator {
   value;
   #number;
   #captcha_len;
+  #nameArr_len;
 
   constructor() {
     this.#type = new Type();
     this.#checker = new TypeChecker();
     this.#number = 10;
     this.#captcha_len = 5;
+    this.#nameArr_len = 20;
   }
 
   create(length, type) {
@@ -66,8 +68,9 @@ class DataGenerator {
         let element = "";
         for (let j = 1; j < 4; j++) {
           element +=
-            this.#type.consonants[Math.floor(Math.random() * 20)] +
-            this.#type.ovals[Math.floor(Math.random() * this.#captcha_len)];
+            this.#type.consonants[
+              Math.floor(Math.random() * this.#nameArr_len)
+            ] + this.#type.ovals[Math.floor(Math.random() * this.#captcha_len)];
         }
         array.push(element);
       }
