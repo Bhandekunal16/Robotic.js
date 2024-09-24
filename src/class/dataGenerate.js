@@ -11,6 +11,7 @@ class DataGenerator {
   constructor() {
     this.#type = new Type();
     this.#checker = new TypeChecker();
+    this.value = "";
   }
 
   create(length, type) {
@@ -90,7 +91,6 @@ class DataGenerator {
   }
 
   captcha() {
-    this.value = "";
     for (let j = 1; j < 5; j++) {
       this.value +=
         this.#type.consonants[
