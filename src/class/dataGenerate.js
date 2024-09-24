@@ -94,7 +94,7 @@ class DataGenerator {
   captcha() {
     this.value = "";
     const [num1, num2] = [10, 5];
-    for (let j = 1; j < captcha; j++) {
+    for (let j = 1; j < num2; j++) {
       this.value +=
         this.#type.consonants[
           Math.floor(Math.random() * num1)
