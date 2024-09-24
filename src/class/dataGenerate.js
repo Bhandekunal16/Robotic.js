@@ -79,12 +79,11 @@ class DataGenerator {
     try {
       let array = [];
       for (let index = 0; index < length; index++) {
-        let [name, element] = [[], ""];
+        let element = ""
         for (let j = 1; j < 7; j++) {
           element += this.#type.consonants[Math.floor(Math.random() * 20)];
         }
-        name.push(element + this.#type.emails[Math.floor(Math.random() * 4)]);
-        array.push(...name);
+        array.push(element + this.#type.emails[Math.floor(Math.random() * 4)]);
       }
       return array.length > 0 ? array : new Error(this.error);
     } catch (error) {
