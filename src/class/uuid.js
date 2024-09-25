@@ -1,9 +1,15 @@
 const Type = require("../../global/global");
 
 class UUID {
-  randomAlphabet() {
-    return new Type().consonants[
-      Math.floor(Math.random() * new Type().consonants.length)
+  #type;
+
+  constructor() {
+    this.#type = new Type();
+  }
+
+  #randomAlphabet() {
+    return this.#type.consonants[
+      Math.floor(Math.random() * this.#type.consonants.length)
     ];
   }
 
@@ -11,8 +17,8 @@ class UUID {
     let array = "";
     for (let index = 0; index < 4; index++) {
       const uuid =
-        this.randomAlphabet().toLocaleUpperCase() +
-        this.randomAlphabet() +
+        this.#randomAlphabet().toLocaleUpperCase() +
+        this.#randomAlphabet() +
         Math.floor(Math.random() * 100);
       array += uuid;
     }
@@ -29,14 +35,15 @@ class UUID {
   }
 
   vectorized() {
-    let value = "";
-    for (let index = 0; index < 10; index++) {
-      const string = this.randomAlphabet();
-      value += string;
+    const valueArray = new Array(10);
+    for (let i = 0; i < 10; i++) {
+      valueArray[i] = this.#randomAlphabet();
     }
-    const buffer = Buffer.from(value, "utf-8");
-    return buffer.toString("hex");
+    const value = valueArray.join("");
+    return Buffer.from(value, "utf-8").toString("hex");
   }
 }
 
 module.exports = UUID;
+
+console.log(new UUID().vectorized());
