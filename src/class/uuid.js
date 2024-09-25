@@ -16,22 +16,20 @@ class UUID {
   alphanumeric() {
     let array = "";
     for (let index = 0; index < 4; index++) {
-      const uuid =
+      array +=
         this.#randomAlphabet().toLocaleUpperCase() +
         this.#randomAlphabet() +
         Math.floor(Math.random() * 100);
-      array += uuid;
     }
     return array;
   }
 
   numeric(length) {
-    let number = "";
-    let arrayLength = length == undefined ? 10 : length;
-    for (let index = 0; index < arrayLength; index++) {
-      number += Math.floor(Math.random() * 10);
+    let number = length == undefined ? new Array(10) : new Array(length);
+    for (let i = 0; i < number.length; i++) {
+      number[i] = Math.floor(Math.random() * 10);
     }
-    return number;
+    return number.join("");
   }
 
   vectorized() {
@@ -46,4 +44,4 @@ class UUID {
 
 module.exports = UUID;
 
-console.log(new UUID().vectorized());
+console.log(new UUID().alphanumeric());
