@@ -1,17 +1,27 @@
 class Response {
+  #Error;
+  #NotFound;
+  #Created;
+  #Success;
+  #BadRequest;
+  #Forbidden;
+  #BadGateway;
+  #ServiceUnavailable;
+
   constructor() {
-    this.Error = "Internal Server Error";
-    this.NotFound = "not found";
-    this.Created = "successfully created";
-    this.Success = "success";
-    this.BadRequest = "bad request";
-    this.Forbidden = "forbidden";
-    this.BadGateway = "bad gateway";
-    this.ServiceUnavailable = "service unavailable";
+    this.#Error = "Internal Server Error";
+    this.#NotFound = "not found";
+    this.#Created = "successfully created";
+    this.#Success = "success";
+    this.#BadRequest = "bad request";
+    this.#Forbidden = "forbidden";
+    this.#BadGateway = "bad gateway";
+    this.#ServiceUnavailable = "service unavailable";
   }
+
   error(res, message, process) {
-    process != undefined ? process.status(500) : null;
-    const msg = message != undefined ? this.Error : message;
+    process == undefined ? process.status(500) : null;
+    const msg = message == undefined ? this.#Error : message;
     return {
       response: res,
       statusCode: 500,
@@ -21,8 +31,8 @@ class Response {
   }
 
   notFound(res, message, process) {
-    process != undefined ? process.status(404) : null;
-    const msg = message != undefined ? this.NotFound : message;
+    process == undefined ? process.status(404) : null;
+    const msg = message == undefined ? this.#NotFound : message;
     return {
       response: res,
       statusCode: 404,
@@ -32,8 +42,8 @@ class Response {
   }
 
   badRequest(res, message, process) {
-    process != undefined ? process.status(400) : null;
-    const msg = message != undefined ? this.BadRequest : message;
+    process == undefined ? process.status(400) : null;
+    const msg = message == undefined ? this.#BadRequest : message;
     return {
       response: res,
       statusCode: 400,
@@ -43,8 +53,8 @@ class Response {
   }
 
   badGateway(res, message, process) {
-    process != undefined ? process.status(502) : null;
-    const msg = message != undefined ? this.BadGateway : message;
+    process == undefined ? process.status(502) : null;
+    const msg = message == undefined ? this.#BadGateway : message;
     return {
       response: res,
       statusCode: 502,
@@ -54,8 +64,8 @@ class Response {
   }
 
   forbidden(res, message, process) {
-    process != undefined ? process.status(401) : null;
-    const msg = message != undefined ? this.Forbidden : message;
+    process == undefined ? process.status(401) : null;
+    const msg = message == undefined ? this.#Forbidden : message;
     return {
       response: res,
       statusCode: 401,
@@ -65,8 +75,8 @@ class Response {
   }
 
   serviceUnavailable(res, message, process) {
-    process != undefined ? process.status(503) : null;
-    const msg = message != undefined ? this.ServiceUnavailable : message;
+    process == undefined ? process.status(503) : null;
+    const msg = message == undefined ? this.#ServiceUnavailable : message;
     return {
       response: res,
       statusCode: 503,
@@ -76,12 +86,12 @@ class Response {
   }
 
   created(res, message) {
-    const msg = message != undefined ? this.Created : message;
+    const msg = message == undefined ? this.#Created : message;
     return { data: res, statusCode: 201, status: true, msg: msg };
   }
 
   success(res, message) {
-    const msg = message != undefined ? this.Success : message;
+    const msg = message == undefined ? this.#Success : message;
     return { data: res, statusCode: 200, status: true, msg: msg };
   }
 }
