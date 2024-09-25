@@ -20,7 +20,7 @@ class Response {
   }
 
   error(res, message, process) {
-    process == undefined ? process.status(500) : null;
+    process != undefined ? process.status(500) : null;
     const msg = message == undefined ? this.#Error : message;
     return {
       response: res,
@@ -31,7 +31,7 @@ class Response {
   }
 
   notFound(res, message, process) {
-    process == undefined ? process.status(404) : null;
+    process != undefined ? process.status(404) : null;
     const msg = message == undefined ? this.#NotFound : message;
     return {
       response: res,
@@ -42,7 +42,7 @@ class Response {
   }
 
   badRequest(res, message, process) {
-    process == undefined ? process.status(400) : null;
+    process != undefined ? process.status(400) : null;
     const msg = message == undefined ? this.#BadRequest : message;
     return {
       response: res,
@@ -53,7 +53,7 @@ class Response {
   }
 
   badGateway(res, message, process) {
-    process == undefined ? process.status(502) : null;
+    process != undefined ? process.status(502) : null;
     const msg = message == undefined ? this.#BadGateway : message;
     return {
       response: res,
@@ -64,7 +64,7 @@ class Response {
   }
 
   forbidden(res, message, process) {
-    process == undefined ? process.status(401) : null;
+    process != undefined ? process.status(401) : null;
     const msg = message == undefined ? this.#Forbidden : message;
     return {
       response: res,
@@ -75,7 +75,7 @@ class Response {
   }
 
   serviceUnavailable(res, message, process) {
-    process == undefined ? process.status(503) : null;
+    process != undefined ? process.status(503) : null;
     const msg = message == undefined ? this.#ServiceUnavailable : message;
     return {
       response: res,
